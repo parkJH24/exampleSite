@@ -1,0 +1,56 @@
+import gsap from "gsap";
+import { useEffect, useRef } from "react"
+
+
+const LineAnimation = () => {
+    const lineRef = useRef<SVGPathElement | null>(null);
+    const winRef = useRef<Window | null>(null);
+
+    useEffect(() => {
+        const line = lineRef.current;
+        let winX = window.innerWidth;
+        let lineC = winX / 2
+
+        const onResize = () => {
+            winX = window.innerWidth;
+            lineC = winX / 2
+            if (line) {
+                line.setAttribute('d', `M0 0 Q${lineC} -50 ${winX} 0`);
+            }
+        }
+
+        const bounceMove = (e: WheelEvent) => {
+            let scrollLength = document.documentElement.scrollTop * 0.0010;
+            if (line) {
+                gsap.timeline()
+                    .set(line, {
+                        attr: {
+                            d: `M0 0 Q${lineC} -${scrollLength} ${winX} 0`
+                        }
+                    })
+                    .to(line, {
+                        duration: 1.5,
+                        ease: 'elastic(1, 0.3)',
+                        attr: {
+                            d: `M0 0 Q${lineC} -50 ${winX} 0`
+                        }
+                    })
+            }
+        }
+        window.addEventListener('resize', onResize);
+        window.addEventListener('wheel', bounceMove);
+
+        return () => {
+            window.removeEventListener('resize', onResize);
+            window.removeEventListener('wheel', bounceMove);
+        };
+    }, [])
+
+    return (
+        <svg className="w-full h-[120px]" xmlns="http://www.w3.org/2000/svg">
+            <path ref={lineRef} fill="#fffdf6" stroke="#333333" strokeWidth="2" d="M 0 120 C 384 60, 1536 60, 1920  120" />
+        </svg>
+    );
+}
+
+export default LineAnimation;
