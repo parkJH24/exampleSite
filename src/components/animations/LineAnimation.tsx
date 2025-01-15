@@ -1,3 +1,5 @@
+"use client"
+
 import gsap from "gsap";
 import { useEffect, useRef } from "react"
 
@@ -47,8 +49,8 @@ const LineAnimation = () => {
     }, [])
 
     return (
-        <svg className="w-full h-[120px]" xmlns="http://www.w3.org/2000/svg">
-            <path ref={lineRef} fill="#fffdf6" stroke="#333333" strokeWidth="2" d="M 0 120 C 384 60, 1536 60, 1920  120" />
+        <svg className="fill-none z-[5] stroke-[#333] stroke-[3px] overflow-visible relative" xmlns="http://www.w3.org/2000/svg">
+            <path ref={lineRef} fill="#fffdf6" stroke="#333333" strokeWidth="2" d="M0 0 Q951.5 -50 1903 0" />
         </svg>
     );
 }
