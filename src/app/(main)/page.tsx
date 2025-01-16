@@ -1,9 +1,7 @@
 "use client"
-import LineAnimation from "@/components/animations/LineAnimation";
+
 import Curriculum from "@/components/curriculum";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
-import Image from "next/image";
-import styled from "styled-components";
 
 export default function Home() {
   return (

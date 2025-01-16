@@ -49,7 +49,11 @@ const Nav = () => {
 
 const PageTransition = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-white z-50 animate-slide-up"></div>
+    <div className="fixed top-0 left-0 w-full h-full bg-white z-50 animate-slide-up">
+        <svg className="fill-none z-[5] stroke-[#333] stroke-[3px] overflow-visible relative" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fffdf6" stroke="#333333" strokeWidth="2" d="M0 0 Q951.5 -50 1903 0" />
+        </svg>
+    </div>
   );
 };
 

@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react"
 
 const LineAnimation = () => {
     const lineRef = useRef<SVGPathElement | null>(null);
-    const winRef = useRef<Window | null>(null);
 
     useEffect(() => {
         const line = lineRef.current;
@@ -22,7 +21,7 @@ const LineAnimation = () => {
         }
 
         const bounceMove = (e: WheelEvent) => {
-            let scrollLength = document.documentElement.scrollTop * 0.0010;
+            const scrollLength = document.documentElement.scrollTop * 0.0010;
             if (line) {
                 gsap.timeline()
                     .set(line, {
