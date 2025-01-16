@@ -20,7 +20,7 @@ const LineAnimation = () => {
             }
         }
 
-        const bounceMove = (e: WheelEvent) => {
+        const bounceMove = () => {
             const scrollLength = document.documentElement.scrollTop * 0.0010;
             if (line) {
                 gsap.timeline()
