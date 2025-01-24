@@ -5,7 +5,7 @@ export default function VisualTextWrapper() {
         <div className=" box-border fixed top-[0px] left-[0rem] pt-[20rem] px-[10rem]">
             {/* 서브 텍스트 */}
             <p className="tracking-[0.5rem] font-medium text-2xl text-[#333333] mb-8">
-                WE ARE A EUROPEAN INVESTMENT FUND
+                FRONTEND PORTFOLIO SITE
             </p>
 
             {/* 메인 텍스트 */}
