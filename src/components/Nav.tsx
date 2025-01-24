@@ -26,8 +26,8 @@ const Nav = () => {
               <Link
                 href={item.path}
                 onClick={handleNavigation(item.path)}
-                className={`block text-3xl font-bold relative transition-transform duration-500 ${
-                  currentPath === item.path ? "-translate-y-4" : "group-hover:-translate-y-4"
+                className={`block text-3xl font-light relative transition-transform duration-500 ${
+                  currentPath === item.path ? "-translate-y-4" : "group-hover:-translate-y-4 font-bold"
                 }`}
               >
                 {item.label}
