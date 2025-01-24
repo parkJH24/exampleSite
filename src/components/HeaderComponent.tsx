@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const HeaderComponent = () => {
     return (
-        <header className="fixed top-0 left-0 flex gap-[30rem] p-6 w-full z-[999]">
+        <header className="fixed top-0 left-0 flex gap-[30rem] pt-12 pl-6 w-full z-[999]">
             <h1 className="w-36">
                 <Image
                     src="/images/logo.png"
