@@ -57,7 +57,7 @@ export default function VisualTextWrapper() {
         ref={subTextRef}
         className="tracking-[0.5rem] font-medium text-2xl text-[#333333] mb-8 opacity-0"
       >
-        FRONTEND PORTFOLIO SITE
+        CODING EXAMPLE TUTORIAL SITE
       </p>
 
       {/* 메인 텍스트 */}
