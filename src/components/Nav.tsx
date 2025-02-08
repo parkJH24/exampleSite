@@ -26,13 +26,13 @@ const Nav = () => {
               <Link
                 href={item.path}
                 onClick={handleNavigation(item.path)}
-                className={`block text-3xl font-light relative transition-transform duration-500 ${
-                  currentPath === item.path ? "-translate-y-4" : "group-hover:-translate-y-4 font-bold"
-                }`}
+                className={`block text-2xl relative transition-transform duration-500 ${
+                  currentPath === item.path ? "-translate-y-4" : "group-hover:-translate-y-4"
+                } ${currentPath === item.path ? "font-bold": "font-light"}`}
               >
                 {item.label}
                 <span
-                  className={`block w-5 h-5 border-[0.2rem] border-gray-800 bg-yellow-300 rounded-full mt-4 mx-auto transition-all duration-500 transform ${
+                  className={`block w-4 h-4 border-[0.2rem] border-gray-800 bg-yellow-300 rounded-full mt-4 mx-auto transition-all duration-500 transform ${
                     currentPath === item.path
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0"
@@ -60,9 +60,9 @@ const PageTransition = () => {
 // 메뉴 항목 데이터
 const menuItems = [
   { label: "Home", path: "/" },
-  { label: "Slider", path: "/slider" },
+  // { label: "Css", path: "/css" },
   { label: "Animation", path: "/animation" },
-  { label: "Css", path: "/css" },
+  { label: "JavaScript", path: "/javaScript" },
   { label: "Clone", path: "/clone" },
 ];
 

@@ -3,7 +3,7 @@ import LineAnimation from "@/components/animations/LineAnimation";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
 import Curriculum from "@/components/curriculum";
 
-const ClonePages = () => {
+const JavaScriptPages = () => {
   return (
     <div className="w-full h-screen">
       {/* VisualTextWrapper 추가 */}
@@ -43,4 +43,4 @@ const ClonePages = () => {
   );
 };
 
-export default ClonePages;
+export default JavaScriptPages;
