@@ -1,7 +1,7 @@
 "use client";
 import LineAnimation from "@/components/animations/LineAnimation";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
-import Curriculum from "@/components/curriculum";
+
 
 const animationPages = () => {
   return (
