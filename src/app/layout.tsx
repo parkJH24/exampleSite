@@ -2,10 +2,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import HeaderComponent from "@/components/HeaderComponent";
-import { useParams, usePathname } from "next/navigation";
-import { useEffect } from "react";
-import { pageColors } from "@/styles/colors";
-import Head from "next/head";
 import LayoutBackground from "@/components/LayoutBackground";
 
 
