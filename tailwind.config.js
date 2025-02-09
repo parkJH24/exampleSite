@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       animation : {
-        'slide-up': 'slide-up 0.7s ease-out forwards',
+        'slide-up': 'slide-up 0.4s ease-out forwards',
       }
     },
   },

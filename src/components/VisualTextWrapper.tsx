@@ -12,42 +12,45 @@ export default function VisualTextWrapper() {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    // 초기 상태 설정 (위치는 그대로, 투명도만 0)
+    // 초기 상태 설정 (위치는 유지, 투명도 0)
     gsap.set([subTextRef.current, mainTextRef1.current, mainTextRef2.current, dotRef.current], {
       opacity: 0,
     });
 
-    // 서브 텍스트 (왼쪽에서 오른쪽으로 등장)
-    tl.fromTo(
-      subTextRef.current,
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1.2, ease: "power3.out" }
-    )
+    tl
+      // 서브 텍스트 (왼쪽에서 오른쪽으로 등장 + 약간 확대)
+      .fromTo(
+        subTextRef.current,
+        { opacity: 0, x: -50, scale: 0.95 },
+        { opacity: 1, x: 0, scale: 1, duration: 1.2, ease: "power3.out" }
+      )
 
-    // 메인 텍스트 1 (아래에서 위로 등장)
-    .fromTo(
-      mainTextRef1.current,
-      { opacity: 0, y: 50 }, // 현재 위치에서 50px 아래 시작
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-      "-=0.8" // 이전 애니메이션과 겹쳐서 실행
-    )
+      // 메인 텍스트 1 (아래에서 위로 자연스럽게 등장)
+      .fromTo(
+        mainTextRef1.current,
+        { opacity: 0, y: 80 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+        "-=0.8" // 이전 애니메이션과 살짝 겹침
+      )
 
-    // 메인 텍스트 2 (아래에서 위로 등장)
-    .fromTo(
-      mainTextRef2.current,
-      { opacity: 0, y: 50 }, // 현재 위치에서 50px 아래 시작
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
-      "-=0.8"
-    )
+      // 메인 텍스트 2 (아래에서 위로 자연스럽게 등장)
+      .fromTo(
+        mainTextRef2.current,
+        { opacity: 0, y: 80 },
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
+        "-=0.8"
+      )
 
-    // 점 (⚫) 살짝 점프하면서 등장
-    .fromTo(
+      // 점 (⚫) 3단 점프 후 등장 (반동 효과)
+      .fromTo(
         dotRef.current,
-        { opacity: 0, y: -30,  }, // 시작 위치 (살짝 아래)
-        { opacity: 1, y: 0, duration: 1, ease: "bounce.out" },
+        { opacity: 0, y: -30, scale: 0.7 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "bounce.out" },
         "-=0.5"
       )
-  
+      .to(dotRef.current, { y: -10, duration: 0.2, ease: "power2.out" }) // 살짝 점프
+      .to(dotRef.current, { y: 0, duration: 0.3, ease: "bounce.out" }); // 다시 원래 위치로
+
   }, []);
 
   return (
@@ -66,7 +69,7 @@ export default function VisualTextWrapper() {
       </p>
       <p ref={mainTextRef2} className="font-bold text-[8rem] text-[#333333] relative inline-block opacity-0">
         Commerce
-        {/* After 요소를 대신한 span */}
+        {/* 점 (⚫) */}
         <span
           ref={dotRef}
           className="block w-[1.5rem] h-[1.5rem] absolute right-[-3rem] bottom-0 
