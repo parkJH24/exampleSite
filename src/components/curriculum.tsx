@@ -9,7 +9,7 @@ const Curriculum = () => {
       <LineAnimation />
       <div className="flex flex-col lg:flex-row max-w-[160rem] mx-auto items-center justify-center px-6 lg:px-0">
         <div className="mb-10 lg:mb-0">
-          <AnimateIcon className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]" />
+          <AnimateIcon />
         </div>
         
         <div className="w-full lg:w-1/2 text-center lg:text-left">
