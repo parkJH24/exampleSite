@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import HeaderComponent from "@/components/HeaderComponent";
 import LayoutBackground from "@/components/LayoutBackground";
+import FooterContainer from "@/components/Footer";
 
 
 
@@ -38,9 +39,9 @@ export default function RootLayout({
 
 
         </main>
-        {/* <footer className="p-4 bg-gray-800 text-white text-center">
-          © 2024 My Application
-        </footer> */}
+
+        <FooterContainer/>
+        
       </body>
     </html>
   );

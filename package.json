@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lordicon/react": "^1.10.1",
     "framer-motion": "^11.17.1",
     "gsap": "^3.12.7",
+    "lottie-colorify": "^0.8.0",
+    "lottie-react": "^2.4.1",
     "next": "14.0.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",

@@ -1,6 +1,8 @@
 "use client";
 
+import LineAnimation from "@/components/animations/LineAnimation";
 import Curriculum from "@/components/curriculum";
+import MainList from "@/components/MainList";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
@@ -29,11 +31,12 @@ export default function Home() {
   }, [pathname]);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full relative z-11">
       {/* Page Active Section */}
       <VisualTextWrapper />
-      <div className="mt-[80rem] relative z-11 bg-[#fffdf6] h-[100vh]">
+      <div className="mt-[80rem] relative z-11 bg-[#fffdf6]">
         <Curriculum />
+        <MainList/>
       </div>
     </div>
   );
