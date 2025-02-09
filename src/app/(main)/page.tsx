@@ -1,6 +1,5 @@
 "use client";
 
-import LineAnimation from "@/components/animations/LineAnimation";
 import Curriculum from "@/components/curriculum";
 import MainList from "@/components/MainList";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
