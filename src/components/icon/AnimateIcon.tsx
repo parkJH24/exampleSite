@@ -1,19 +1,40 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import animationData from "/public/icon/animation.json"; // public 폴더의 JSON 파일 불러오기
 
-// Lottie를 동적으로 불러와서 서버 사이드 렌더링 방지
+// Lottie를 동적으로 불러오기 (SSR 방지)
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const AnimateIcon = () => {
-  return <Lottie animationData={animationData} loop 
-  style={{
-    height : '600px',
-    backgroundColor: "transparent"
-  }}
-  
-  />;
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    const fetchAnimation = async () => {
+      try {
+        const response = await fetch("/icon/animation.json"); // public 폴더에서 JSON 불러오기
+        const data = await response.json();
+        setAnimationData(data);
+      } catch (error) {
+        console.error("애니메이션 JSON 로드 중 오류 발생:", error);
+      }
+    };
+
+    fetchAnimation();
+  }, []);
+
+  if (!animationData) return <p>로딩 중...</p>;
+
+  return (
+    <Lottie
+      animationData={animationData}
+      loop
+      style={{
+        height: "600px",
+        backgroundColor: "transparent",
+      }}
+    />
+  );
 };
 
 export default AnimateIcon;
