@@ -2,10 +2,10 @@
 import Image from "next/image"
 import Nav from "./Nav";
 
-
 const HeaderComponent = () => {
     return (
-        <header className="fixed top-0 left-0 flex gap-[50rem] pt-12 pl-6 w-full z-[999]">
+        <header className="fixed top-0 left-0 flex items-center w-full p-6 z-[999]">
+            {/* 로고 */}
             <h1 className="w-36">
                 <Image
                     src="/images/logo.png"
@@ -15,12 +15,15 @@ const HeaderComponent = () => {
                     className="w-auto h-auto"
                 />
             </h1>
-            <Nav />
-        </header>
 
+            {/* 네비게이션 */}
+            <div className="md:flex m-auto"> {/* 데스크톱에서만 보이도록 설정 */}
+                <Nav />
+            </div>
+
+            {/* 모바일 햄버거 메뉴 (네비게이션 내부에서 관리) */}
+        </header>
     )
 }
 
 export default HeaderComponent;
-
-
