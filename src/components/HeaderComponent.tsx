@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const HeaderComponent = () => {
     return (
-        <header className="fixed top-0 left-0 flex items-center w-full p-6 z-[999]">
+        <header className="fixed top-0 left-0 flex items-center w-full p-6 pt-[4rem] z-[999]">
             {/* 로고 */}
             <h1 className="w-36">
                 <Image
