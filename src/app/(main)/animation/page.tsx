@@ -5,7 +5,7 @@ import AnimationTabContent from "@/components/AnimationTabContent";
 import AnimationTab from "@/components/AnimationTab";
 import VisualTextWrapper from "@/components/VisualTextWrapper";
 
-const animationPages = () => {
+const AnimationPages = () => {
   // 📌 각 섹션의 ref 생성
   const sectionRefs = {
     Basic: useRef<HTMLDivElement>(null),
@@ -82,4 +82,4 @@ const animationPages = () => {
   );
 };
 
-export default animationPages;
+export default AnimationPages;
