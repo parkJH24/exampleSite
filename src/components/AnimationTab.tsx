@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import {useState } from "react";
 import HeartIcon from "./icon/Heart";
 
 // 📌 탭 메뉴 데이터
