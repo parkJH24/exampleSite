@@ -1,0 +1,297 @@
+
+
+button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.ir {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    z-index: -1;
+    border: none;
+}
+
+.visual-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-wrapper .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.visual-wrapper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    position: relative;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.visual-wrapper .content-wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+}
+
+.swiper-slide-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.visual-wrapper .content-img {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.visual-wrapper .swiper-slide-text {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* .visual-wrapper .swiper-slide-text .ir {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    z-index: -1;
+    border: none;
+} */
+
+.swiper-slide:after {
+    content: "";
+    width: 336px;
+    height: 70px;
+    box-sizing: border-box;
+    border-top: solid 3px #ffffff;
+    border-bottom: solid 3px #ffffff;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 이미지 */
+.item01 .content-bg {
+    background-image: url(../images/main-visual01.jpg);
+}
+
+.item02 .content-bg {
+    background-image: url(../images/main-visual02.jpg);
+}
+
+.item03 .content-bg {
+    background-image: url(../images/main-visual03.jpg);
+}
+
+.item04 .content-bg {
+    background-image: url(../images/main-visual04.jpg);
+}
+
+.item05 .content-bg {
+    background-image: url(../images/main-visual05.jpg);
+}
+
+.item06 .content-bg {
+    background-image: url(../images/main-visual06.jpg);
+}
+
+.item07 .content-bg {
+    background-image: url(../images/main-visual07.jpg);
+}
+
+.item08 .content-bg {
+    background-image: url(../images/main-visual09.jpg);
+}
+
+/* 텍스트 애니메이션 */
+
+.text-anim-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 슬라이드 컨트롤 버튼 */
+.swiper-control {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-controls {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.text-nodes {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-left: 336px;
+    padding-top: 100px;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.text-nodes-active {
+    opacity: 1;
+}
+
+.text-nodes h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.text-nodes h2 {
+    color: #fff;
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.text-link {
+    position: absolute;
+    bottom: 200px;
+    left: 336px;
+
+}
+
+.text-link .link-item {
+    display: flex;
+    gap: 80px;
+    pointer-events: auto;
+}
+
+.text-link a {
+    font-size: 16px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  color: #fff;
+}
+
+.text-link .link-item a span {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.text-link .link-item a span:after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+}
+
+.text-link .link-item a:hover span:after {
+    transition: 300ms;
+    width: 100%;
+}
+
+
+.visual-wrapper .visual-control {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 9;
+  }
+  .visual-wrapper .visual-control .swiper-pagination {
+    position: static;
+  }
+  .visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+  }
+  .visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: transparent;
+    border-color: #ffffff;
+  }
+  .visual-wrapper .visual-control ul {
+    display: flex;
+    gap: 16px;
+  }
+  .visual-wrapper .visual-control ul li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+  }
+  .visual-wrapper .visual-control ul li:first-of-type {
+    border-color: #ffffff;
+    background: transparent;
+  }
+  .visual-wrapper .visual-control .pause-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .visual-wrapper .visual-control .pause-btn .bx-play {
+    display: none;
+  }
+  .visual-wrapper .visual-control .pause-btn.on .bx-pause {
+    display: none;
+  }
+  .visual-wrapper .visual-control .pause-btn.on .bx-play {
+    display: block;
+  }

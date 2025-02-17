@@ -2,16 +2,59 @@
     {
         "id": 1,
         "title": "CSS Keyframe Animation",
-        "category": "Transition",
-        "thumbnail": "/thumbnails/Transition/ex01.jpg",
-        "link": "/examples/Transition/ex01/index.html"
+        "category": "Animation",
+        "subCategory": "Transition",
+        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
+        "link": "/examples/Animation/Transition/ex01/index.html"
       },
       {
         "id": 2,
         "title": "CSS Keyframe Animation",
-        "category": "Transition",
-        "thumbnail": "/thumbnails/Transition/ex01.jpg",
-        "link": "/examples/Transition/ex01/index.html"
+        "category": "Animation",
+        "subCategory": "Transition",
+        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
+        "link":"/examples/Animation/Transition/ex01/index.html"
+      },
+      {
+        "id": 3,
+        "title": "CSS Keyframe Animation",
+        "category": "Animation",
+        "subCategory": "Transition",
+        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
+        "link": "/examples/Animation/Transition/ex01/index.html"
+      },
+
+      {
+        "id": 4,
+        "title": "CSS Keyframe Animation",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex01.jpg",
+        "link": "/examples/Javascript/Mouse/ex01/index.html"
+      },
+      {
+        "id": 5,
+        "title": "CSS Keyframe Animation",
+        "category": "Javascript",
+        "subCategory": "Scroll",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex01.jpg",
+        "link": "/examples/Javascript/Scroll/ex01/index.html"
+      },
+      {
+        "id": 6,
+        "title": "CSS Keyframe Animation",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex01.jpg",
+        "link": "/examples/Javascript/Mouse/ex02/index.html"
+      },
+      {
+        "id": 7,
+        "title": "[javaScript]제네시스 슬라이드",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex01.jpg",
+        "link": "/examples/Javascript/Slide/ex01/index.html"
       }
 
 ]

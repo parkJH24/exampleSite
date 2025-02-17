@@ -101,9 +101,9 @@ const PageTransition = () => {
 // 메뉴 항목 데이터
 const menuItems = [
   { label: "Home", path: "/" },
-  { label: "Animation", path: "/animation" },
-  { label: "JavaScript", path: "/javaScript" },
-  { label: "Clone", path: "/clone" },
+  { label: "Animation", path: "/animation/" },
+  { label: "JavaScript", path: "/javaScript/" },
+  { label: "Clone", path: "/clone/" },
 ];
 
 export default Nav;

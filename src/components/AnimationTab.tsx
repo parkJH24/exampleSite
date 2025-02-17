@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import HeartIcon from "./icon/Heart";
-import AnimationTabContent from "./AnimationTabContent"
 
-// 📌 탭 데이터
+// 📌 탭 메뉴 데이터
 const tabs = [
-  { id: "All", label: "All" },
   { id: "Basic", label: "Basic" },
   { id: "UI", label: "UI" },
   { id: "Text", label: "Text" },
@@ -14,36 +12,42 @@ const tabs = [
   { id: "GSAP", label: "GSAP" },
 ];
 
-export default function TabMenu() {
-  const [activeTab, setActiveTab] = useState("All");
+export default function AnimationTab({ sectionRefs }: { sectionRefs: Record<string, React.RefObject<HTMLDivElement>> }) {
+  // 📌 Hover 상태 관리
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
 
+  // 📌 클릭 시 해당 섹션으로 스크롤 이동
+  const handleScrollToSection = (id: string) => {
+    sectionRefs[id]?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <div className="flex flex-col items-center">
-      {/* 📌 탭 메뉴 */}
-      <div className="flex justify-center items-center gap-6 mb-8">
-        {tabs.map((tab, index) => (
-          <div key={tab.id} className="flex items-center gap-3">
-            <button
-              onClick={() => setActiveTab(tab.id)}
-              onMouseEnter={() => setHoveredTab(tab.id)}
-              onMouseLeave={() => setHoveredTab(null)}
-              className={`flex items-center gap-2 transition-all duration-300 ${
-                activeTab === tab.id ? "opacity-100 scale-110" : "opacity-70 hover:opacity-100"
+    <div className="flex justify-center items-center gap-6 mb-[12rem] mt-[-10rem]">
+      {tabs.map((tab, index) => (
+        <div key={tab.id} className="flex items-center gap-[3rem]">
+          {/* 탭 버튼 (Hover 적용) */}
+          <button
+            onClick={() => handleScrollToSection(tab.id)}
+            onMouseEnter={() => setHoveredTab(tab.id)}
+            onMouseLeave={() => setHoveredTab(null)}
+            className="flex items-center gap-[1rem] transition-all duration-300 opacity-70 hover:opacity-100"
+          >
+            <HeartIcon isHovered={hoveredTab === tab.id} />
+            <span
+              className={`text-[1.6rem] font-medium transition-all duration-300 ${
+                hoveredTab === tab.id ? "text-gray-900 font-bold" : "text-gray-600"
               }`}
             >
-              <HeartIcon isHovered={hoveredTab === tab.id} />
-              <span className={`text-lg font-medium transition-all duration-300 ${activeTab === tab.id ? "text-gray-900 font-bold" : "text-gray-600"}`}>
-                {tab.label}
-              </span>
-            </button>
-            {index < tabs.length - 1 && <span className="w-2 h-2 bg-[#bffeff] border-[0.2rem] border-[#333333] rounded-full"></span>}
-          </div>
-        ))}
-      </div>
+              {tab.label}
+            </span>
+          </button>
 
-      {/* 📌 탭별 예제 리스트 렌더링 */}
-      <AnimationTabContent activeTab={activeTab} />
+          {/* 🔹 중간 구분 점 (마지막 탭 제외) */}
+          {index < tabs.length - 1 && (
+            <span className="w-[0.8rem] h-[0.8rem] bg-[#bffeff] border-[0.2rem] border-[#333333] rounded-full"></span>
+          )}
+        </div>
+      ))}
     </div>
   );
 }
