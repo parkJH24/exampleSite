@@ -60,6 +60,7 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
           <a
             key={example.id}
             href={example.link}
+            target="_blank"
             className="block rounded-lg overflow-hidden"
           >
             <Image

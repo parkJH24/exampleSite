@@ -41,7 +41,7 @@ const JavaScriptPages = () => {
   
           <section ref={sectionRefs.Mouse} className="bg-[#000000] relative z-11 h-[100vh]">
             <LineAnimation strokeColor="#000000" fillColor="#000000" />
-            <div className="w-full h-[50rem]">
+            <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
               Mouse Animation
             </h2>
@@ -51,7 +51,7 @@ const JavaScriptPages = () => {
 
           <section ref={sectionRefs.Scroll} className="bg-[#fff59b] relative z-11 h-[100vh]">
             <LineAnimation strokeColor="#000000" fillColor="#fff59b" />
-            <div className="w-full h-[50rem]">
+            <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
               Scroll Animation
             </h2>
@@ -61,7 +61,7 @@ const JavaScriptPages = () => {
 
           <section ref={sectionRefs.Slide} className="bg-[#fff] relative z-11 h-[100vh]">
             <LineAnimation strokeColor="#fff" fillColor="#fff" />
-            <div className="w-full h-[50rem]">
+            <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
               Slide
             </h2>
@@ -71,7 +71,7 @@ const JavaScriptPages = () => {
 
           <section ref={sectionRefs.GSAP} className="bg-[#000000] relative z-11 h-[100vh]">
             <LineAnimation strokeColor="#000000" fillColor="#000000" />
-            <div className="w-full h-[50rem]">
+            <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
               GSAP Animation
             </h2>

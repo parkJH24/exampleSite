@@ -9,7 +9,7 @@ const ClonePages = () => {
       <VisualTextWrapper />
       <section className="bg-[#fffdf6] mt-[80rem] relative z-11 h-[100vh]">
         <LineAnimation />
-        <div className="flex w-full pr-20">
+        <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
           <div className="w-1/2">
             <h2 className="text-7xl tracking-wide">
               Web Development, Web Design<br />

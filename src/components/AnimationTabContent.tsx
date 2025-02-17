@@ -52,7 +52,7 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3rem]">
       {filteredExamples.length > 0 ? (
         filteredExamples.map((example) => (
-          <a key={example.id} href={example.link} className="block rounded-lg overflow-hidden">
+          <a key={example.id} href={example.link} className="block rounded-lg overflow-hidden" target="_blank">
             <Image
               src={example.thumbnail || "/thumbnails/default-thumbnail.jpg"}
               alt={example.title}
