@@ -12,9 +12,9 @@ export default function Home() {
   // 경로별 배경색 설정
   const backgroundColors: { [key: string]: string } = {
     "/": "#bffeff", // Home
-    "/slider": "#ffe4b2", // Slider
+    // "/slider": "#ffe4b2", // Slider
     "/animation": "#c3f7c3", // Animation
-    "/css": "#ffdadf", // CSS
+    "/javaScript": "#ffdadf", // CSS
     "/clone": "#e3d7fe", // Clone
   };
 

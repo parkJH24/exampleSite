@@ -25,16 +25,19 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
   useEffect(() => {
     fetch("/data/examples.json")
       .then((res) => res.json())
-      .then((data: Example[]) => setExamples(data))
+      .then((data: Example[]) => {setExamples(data)
+        // console.log(data)
+      })
       .catch((error) => console.error("예제 데이터를 불러오는 중 오류 발생:", error));
   }, []);
   useEffect(() => {
-    console.log("현재 필터링된 데이터:", filteredExamples);
+    // console.log("현재 필터링된 데이터:", filteredExamples);
   }, [filteredExamples]);
   
 
   // 📌 해당 카테고리만 필터링 (대소문자 일치 처리)
   useEffect(() => {
+   
     if (activeCategory === "Javascript") {
       // ✅ Animation일 경우 subCategory까지 체크
       setFilteredExamples(

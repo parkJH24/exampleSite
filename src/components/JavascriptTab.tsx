@@ -20,6 +20,7 @@ export default function JavascriptTab({ sectionRefs }: { sectionRefs: Record<str
   // 📌 클릭 시 해당 섹션으로 스크롤 이동
   const handleScrollToSection = (id: string) => {
     console.log("클릭된 탭 ID:", id);
+    console.log("해당 ID의 ref 객체:", sectionRefs[id]);
     sectionRefs[id]?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 

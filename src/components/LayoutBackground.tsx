@@ -1,16 +1,21 @@
 "use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { pageColors } from "@/styles/colors";
 
 export default function LayoutBackground() {
   const pathname = usePathname();
+  const cleanedPathname = pathname.replace(/\/$/, ""); // ✅ 마지막 `/` 제거
 
   useEffect(() => {
-    // 각 페이지의 색상 지정
-    const mainColor = pageColors[pathname] || pageColors["default"];
-    document.body.style.backgroundColor = mainColor;
-  }, [pathname]);
+    const bgColor = pageColors[cleanedPathname] || pageColors["default"];
 
-  return null; // UI를 렌더링하지 않음
+    console.log("현재 경로:", cleanedPathname); // ✅ 디버깅 로그
+    console.log("적용될 배경색:", bgColor); // ✅ 적용될 배경색 확인
+
+    document.body.style.backgroundColor = bgColor;
+  }, [cleanedPathname]); // pathname 변경될 때마다 실행
+
+  return null;
 }

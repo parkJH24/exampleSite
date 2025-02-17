@@ -52,7 +52,7 @@
         "id": 7,
         "title": "[javaScript]제네시스 슬라이드",
         "category": "Javascript",
-        "subCategory": "Mouse",
+        "subCategory": "Slide",
         "thumbnail": "/thumbnails/Javascript/Mouse/ex01.jpg",
         "link": "/examples/Javascript/Slide/ex01/index.html"
       }

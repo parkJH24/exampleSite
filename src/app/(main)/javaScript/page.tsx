@@ -65,7 +65,7 @@ const JavaScriptPages = () => {
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
               Slide
             </h2>
-              <JavascriptTabContent activeCategory="Javascript" activeSubCategory="Interaction"/>
+              <JavascriptTabContent activeCategory="Javascript" activeSubCategory="Slide"/>
             </div>
           </section>
 

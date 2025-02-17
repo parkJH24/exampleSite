@@ -25,6 +25,8 @@ export default function RootLayout({
   //   document.body.style.backgroundColor = mainColor;
   // }, [pathname]);
 
+  
+
 
   return (
     <html lang="ko">
