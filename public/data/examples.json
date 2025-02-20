@@ -48,6 +48,14 @@
         "subCategory": "Slide",
         "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
         "link": "/examples/Javascript/Slide/ex01/index.html"
+      },
+      {
+        "id": 8,
+        "title": "[javaScript]제네시스 슬라이드",
+        "category": "Javascript",
+        "subCategory": "Slide",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Clone/Mobile/taeyi/index.html"
       }
 
 ]
