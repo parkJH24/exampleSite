@@ -7,59 +7,48 @@ let iframe = document.getElementById("pen");
 let penLink = document.getElementById("penlink");
 let links = document.getElementsByTagName("a");
 
-let frames = [
-    "https://codepen.io/cobra_winfrey/debug/xxVJZwo",
-    "https://cdpn.io/cobra_winfrey/debug/wvGyKEY",
-    "https://codepen.io/cobra_winfrey/debug/OJVJJoj",
-    "https://cdpn.io/cobra_winfrey/debug/YzXOBEN",
-    "https://codepen.io/cobra_winfrey/debug/qBZWVmO",
-    "https://codepen.io/cobra_winfrey/debug/eYOXOdB",
-    "https://codepen.io/cobra_winfrey/debug/OJXJeod",
-    "https://codepen.io/cobra_winfrey/debug/PoqVQRq",
-    "https://cdpn.io/cobra_winfrey/debug/qgEGMZ",
-    "https://codepen.io/cobra_winfrey/debug/RwWYGxj"
-];
+
 
 // Load iFrames on demand & remove after modal is closed to reduce weight & smooth out transitions
 
 
-let cards = document.getElementsByClassName("inner");
-for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("mousemove", function (event) {
-        cursor.classList.add("active");
-    });
-    cards[i].addEventListener("mouseover", function (event) {
-        cursor.classList.add("active");
-    });
+// let cards = document.getElementsByClassName("inner");
+// for (let i = 0; i < cards.length; i++) {
+//     cards[i].addEventListener("mousemove", function (event) {
+//         cursor.classList.add("active");
+//     });
+//     cards[i].addEventListener("mouseover", function (event) {
+//         cursor.classList.add("active");
+//     });
 
-    cards[i].addEventListener("mouseout", function (event) {
-        cursor.classList.remove("active");
-    });
-    cards[i].addEventListener(
-        "click",
-        function (i) {
-            body.classList.add("active");
-            iframe.setAttribute("src", frames[i]);
-            let penDebug = frames[i];
-            let penFull = penDebug.replace("debug", "pen");
-            penLink.setAttribute("href", penFull);
-        }.bind(null, i)
-    );
-}
+//     cards[i].addEventListener("mouseout", function (event) {
+//         cursor.classList.remove("active");
+//     });
+//     cards[i].addEventListener(
+//         "click",
+//         function (i) {
+//             body.classList.add("active");
+//             iframe.setAttribute("src", frames[i]);
+//             let penDebug = frames[i];
+//             let penFull = penDebug.replace("debug", "pen");
+//             penLink.setAttribute("href", penFull);
+//         }.bind(null, i)
+//     );
+// }
 
 // hover events for social links
 
-for (link of links) {
-    link.addEventListener("mouseover", function (event) {
-        cursor.classList.add("linkhover");
-    });
-    link.addEventListener("mousemove", function (event) {
-        cursor.classList.add("linkhover");
-    });
-    link.addEventListener("mouseout", function (event) {
-        cursor.classList.remove("linkhover");
-    });
-}
+// for (link of links) {
+//     link.addEventListener("mouseover", function (event) {
+//         cursor.classList.add("linkhover");
+//     });
+//     link.addEventListener("mousemove", function (event) {
+//         cursor.classList.add("linkhover");
+//     });
+//     link.addEventListener("mouseout", function (event) {
+//         cursor.classList.remove("linkhover");
+//     });
+// }
 
 // Escape key option to exit active state
 
