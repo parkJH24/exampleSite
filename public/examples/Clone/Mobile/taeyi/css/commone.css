@@ -258,6 +258,7 @@ body #wrap p.subhead {
   opacity: 0;
   transform: translateY(50px);
   transition: 0.6s ease-in-out;
+  margin-bottom: 60px;
 }
 
 body #wrap p.subhead.final {
@@ -289,14 +290,9 @@ body #wrap .panel {
   --progress: 0;
   position: relative;
   width: 100%;
-  height: 120vh;
+  height: auto;
   margin-bottom: 30px;
-  display: grid;
-  /* grid-template-columns: repeat(8, 1fr); */
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  padding: 20px;
+  padding: 60px 20px;
   box-sizing: border-box;
   transition: 1s cubic-bezier(1, 0.885, 0.32, 1);
   transform-style: preserve-3d;
@@ -304,6 +300,7 @@ body #wrap .panel {
   backface-visibility: hidden;
   opacity: 0;
 }
+
 
 body #wrap .panel:nth-of-type(even) .thumb:after {
   transform: scaleX(-1);
@@ -324,6 +321,7 @@ body #wrap .panel:last-of-type:nth-of-type(even):before {
 
 body #wrap .panel:nth-of-type(1):before {
   content: "1";
+  top: 70%;
 }
 
 body #wrap .panel:nth-of-type(even):before {
@@ -334,6 +332,7 @@ body #wrap .panel:nth-of-type(even):before {
 
 body #wrap .panel:nth-of-type(2):before {
   content: "2";
+  top: 40%;
 }
 
 body #wrap .panel:nth-of-type(even):before {
@@ -344,6 +343,7 @@ body #wrap .panel:nth-of-type(even):before {
 
 body #wrap .panel:nth-of-type(3):before {
   content: "3";
+ 
 }
 
 body #wrap .panel:nth-of-type(even):before {
@@ -541,15 +541,14 @@ body #wrap .panel:before {
 }
 
 body #wrap .panel h2 {
-  grid-area: 3/1/4/4;
   font-family: "Bogart-Semibold";
   font-size: 64px;
-  position: relative;
+  position: absolute;
   z-index: 3;
   color: transparent;
   line-height: 1;
   pointer-events: none;
-  transform: translateY(calc(100px - (var(--progress) * 10px)));
+  transform: translateY(calc(100px - (var(--progress) * -100px)));
   margin-left: -24px;
 }
 
@@ -559,19 +558,19 @@ body #wrap .panel h2 span.word {
   overflow: hidden;
   color: transparent;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
-  padding: 36px 0;
-  margin: -20px 0;
+  padding: 30px 0;
+  margin: -24px 0;
   -webkit-animation: waving 3s linear infinite;
   animation: waving 3s linear infinite;
   white-space: nowrap;
 }
 
 #wrap .panel .text {
-  grid-area: 5/1/5/6;
   text-align: center;
-  padding: 40px 0px;
+  padding: 60px 0px;
   display: flex;
   flex-direction: column;
+  gap: 36px;
 }
 
 #wrap .panel .text p {
@@ -724,33 +723,37 @@ body #wrap .panel:nth-of-type(even) h2{
   }
 } */
 
-/* body #wrap .panel:nth-of-type(even) .thumb {
-  grid-area: 2/1/5/4;
-} */
 
-@media (max-width: 768px) {
-  body #wrap .panel:nth-of-type(even) .thumb {
-    grid-area: 2/1/5/6;
-  }
-}
+
+
 
 body #wrap .panel:nth-of-type(even) .thumb p {
   top: -50px;
 }
 
 body #wrap .panel .thumb {
-  grid-area: 2/1/5/5;
+  /* grid-area: 2/1/5/5; */
   position: relative;
   box-shadow: 0 0 0 2px #08350e;
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 5px;
+  width: 100%;
+  height: 480px;
 }
 
-@media (max-width: 768px) {
-  body #wrap .panel .thumb {
-    grid-area: 2/1/5/6;
-  }
+/* section02 */
+body #wrap .panel.section02 .thumb{
+  width: 70%;
+  height: 300px;
 }
+body #wrap .panel.section02 .thumb img{
+  left: 50%;
+}
+body #wrap .panel.section02 .text{
+  padding: 120px 0 80px;
+}
+
+
 
 body #wrap .panel .thumb p {
   position: absolute;
@@ -863,7 +866,6 @@ body #wrap .panel .thumb img.lighter {
 
 
 .calendar {
-  grid-area: 7/1/6/5;
   border-collapse: collapse;
   width: 100%;
   /* background: white; */
@@ -907,18 +909,17 @@ td {
   position: absolute;
 }
 
-body #wrap .panel.section03{
-  height: 200vh;
-}
-body #wrap .panel.section03 .thumb{
-  grid-area: 1/1/3/5;
-}
-body #wrap .panel.section03 h2{
-  grid-area: 2/1/4/4;
-}
 
-.timeline{
-  grid-area:4/1/4/4;
+
+/* section03 */
+body #wrap .panel.section03 .thumb{
+  height: 360px;
+}
+body #wrap .panel.section03 .thumb:after{
+  height: calc(100% + 100vh);
+}
+body #wrap .panel.section03 .timeline{
+  padding: 100px 0;
 }
 .timeline .timelineTitle{
   text-align: center;
@@ -930,6 +931,7 @@ body #wrap .panel.section03 h2{
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 24px;
   
 }
 .timeline .timeline-list li{
