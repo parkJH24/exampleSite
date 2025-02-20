@@ -1,43 +1,63 @@
 "use client";
+import { useRef } from "react";
 import LineAnimation from "@/components/animations/LineAnimation";
+import CloneTabContent from "@/components/CloneTabContent";
+
 import VisualTextWrapper from "@/components/VisualTextWrapper";
+import CloneTab from "@/components/CloneTab";
 
 const ClonePages = () => {
+  // 📌 각 섹션의 ref 생성
+  const sectionRefs = {
+    Basic: useRef<HTMLDivElement>(null),
+    UI: useRef<HTMLDivElement>(null),
+    Text: useRef<HTMLDivElement>(null),
+    Transition: useRef<HTMLDivElement>(null),
+    GSAP: useRef<HTMLDivElement>(null),
+  };
+
   return (
-    <div className="w-full h-screen">
-      {/* VisualTextWrapper 추가 */}
+    <div className="w-full relative">
       <VisualTextWrapper />
-      <section className="bg-[#fffdf6] mt-[80rem] relative z-11 h-[100vh]">
-        <LineAnimation />
-        <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
-          <div className="w-1/2">
-            <h2 className="text-7xl tracking-wide">
-              Web Development, Web Design<br />
-              Tutorial Site
-            </h2>
-            <p className="content-text">
-              사이트를 만들기 위해 필요한 기술들을<br />
-              최대한 쉽게 알려드리기 위해 기획한 사이트입니다.<br />
-              틀린 사항이나 오류에 대한 피드백은 항상 감사합니다.
-            </p>
-          </div>
-          <div className="w-1/2">
-            <ul className="curri-list">
-              <li>
-                <p className="curri-text">HTML5, CSS, Web Accessibility</p>
-              </li>
-              <li>
-                <p className="curri-text">HTML5, CSS, Web Accessibility</p>
-              </li>
-              <li>
-                <p className="curri-text">HTML5, CSS, Web Accessibility</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      {/* Curriculum 추가 */}
       
+
+      <div className="mt-[80rem] relative z-11 bg-[#fffdf6]">
+        {/* 🔹 Html Css Clone */}
+        <section ref={sectionRefs.Basic} className="bg-[#fffdf6] relative z-11 pb-[20rem]">
+          <LineAnimation />
+          <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
+          <CloneTab sectionRefs={sectionRefs} /> {/* 탭 메뉴에 refs 전달 */}
+            <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
+              Basic Animation
+            </h2>
+            <CloneTabContent activeCategory="Clone" activeSubCategory="Html" />
+          </div>
+        </section>
+
+        {/* 🔹 Mobile Clone */}
+        <section ref={sectionRefs.UI} className="bg-[#000000] text-white relative z-11 pb-[20rem]">
+          <LineAnimation strokeColor="#ffffff" fillColor="#000000" />
+          <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
+            <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
+              UI Animation
+            </h2>
+            <CloneTabContent activeCategory="Clone" activeSubCategory="Mobile" />
+          </div>
+        </section>
+
+        {/* 🔹 React Clone */}
+        <section ref={sectionRefs.Text} className="bg-[#ffdeac] relative z-11 pb-[20rem]">
+          <LineAnimation strokeColor="#000000" fillColor="#ffdeac" />
+          <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
+            <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
+            React Clone
+            </h2>
+            <CloneTabContent activeCategory="Clone" activeSubCategory="React" />
+          </div>
+        </section>
+
+        
+      </div>
     </div>
   );
 };
