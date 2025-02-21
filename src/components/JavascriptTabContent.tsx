@@ -71,7 +71,7 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
               className="w-full h-[200px] object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold">{example.title}</h3>
+              <h3 className="text-[2rem] font-semibold">{example.title}</h3>
             </div>
           </a>
         ))

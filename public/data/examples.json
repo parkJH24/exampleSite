@@ -43,7 +43,7 @@
 
       {
         "id": 7,
-        "title": "[javaScript]제네시스 슬라이드",
+        "title": "[javaScript , GSAP]슬라이드",
         "category": "Javascript",
         "subCategory": "Slide",
         "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
@@ -51,6 +51,22 @@
       },
       {
         "id": 8,
+        "title": "[Swiper]슬라이드",
+        "category": "Javascript",
+        "subCategory": "Slide",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Javascript/Slide/ex02/index.html"
+      },
+      {
+        "id": 9,
+        "title": "[Swiper]슬라이드02",
+        "category": "Javascript",
+        "subCategory": "Slide",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Javascript/Slide/ex03/index.html"
+      },
+      {
+        "id": 99,
         "title": "[Mobile]초대장 디자인",
         "category": "Clone",
         "subCategory": "Mobile",

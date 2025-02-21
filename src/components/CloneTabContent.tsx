@@ -61,7 +61,7 @@ export default function CloneTabContent({ activeCategory, activeSubCategory }: T
               className="w-full h-[250px] object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold">{example.title}</h3>
+              <h3 className="text-[2rem] font-semibold">{example.title}</h3>
             </div>
           </a>
         ))

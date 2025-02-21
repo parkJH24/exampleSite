@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이프 슬라이드 예제</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        .slider{
+            width: 100%;
+            height: 875px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+        }
+        .swiper-slide{
+            width: 100%;
+            height: 875px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .swiper-slide img{
+            display: block;
+            object-fit: cover;
+        }
+        .swiper-slide-active img{
+            animation : img_ani 5s;
+        }
+        @keyframes img_ani{
+            0%{
+                transform:scale(1.2);
+            }
+            100%{
+                transform:scale(1);
+            }
+        }
+
+        .mask{
+            position: absolute;
+            top: 0px;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(255,255,255,1);
+            opacity: 1;
+        }
+        .mask.one{
+            left: 0px;
+        }
+        .mask.two{
+            left: 25%;
+        }
+        .mask.three{
+            left: 50%;
+        }
+        .mask.four{
+            left: 75%;
+        }
+        .swiper-slide-active .mask{
+            animation-name: mask_ani
+        }
+        .swiper-slide-active .mask.one{
+            animation-duration: 0.5s;
+        }
+        .swiper-slide-active .mask.two{
+            animation-duration: 0.75s;
+        }
+        .swiper-slide-active .mask.three{
+            animation-duration: 1s;
+        }
+        .swiper-slide-active .mask.four{
+            animation-duration: 1.25s;
+        }
+
+        .swiper-slide-active:after{
+            content: "";
+            width: 100%;
+            height: 5px;
+            background: cyan;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            animation: bar_ani 5s linear;
+
+        }
+
+        @keyframes bar_ani{
+            0%{
+                width: 0px;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
+
+        @keyframes mask_ani{
+            0%{
+                width: 100%;
+                background: #333333;
+            }
+            100%{
+                width: 1px;
+                background: #333333;
+            }
+        }
+
+
+        .swiper-pagination{
+            position: absolute;
+            left: 50%!important;
+            transform: translateX(-50%);
+            bottom: 100px!important;
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+        .swiper-pagination .swiper-pagination-bullet{
+            background: #ffffff;
+            width: 5px;
+            height: 30px;
+            transition: 0.5s;
+            border-radius: 0;
+            opacity: 1;
+        }
+        .swiper-pagination .swiper-pagination-bullet-active{
+            background: cyan;
+            height: 40px;
+
+        }
+
+        .btns{
+            width: 150px;
+            height: 60px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.5s;
+            background: transparent;
+            z-index: 99;
+        }
+        .btns:before{
+            content: "";
+            width:50px;
+            height: 2px;
+            display: block;
+            background: #ffffff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%); 
+        }
+        .btns:hover:before{
+            background: cyan;
+        }
+        .swiper-button-prev{
+            justify-content: end;
+        }
+        .swiper-button-prev,
+        .swiper-button-prev:before,
+        .swiper-button-prev:after{
+            left: 0px;
+        }
+
+        .swiper-button-next{
+            justify-content: start;
+        }
+        .swiper-button-next,
+        .swiper-button-next:before,
+        .swiper-button-next:after{
+            right: 0px;
+        }
+
+        .btns:after{
+            content: "";
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            background: #ffffff;
+            transition: 0.5s;
+            z-index: -1;
+        }
+        .btns:hover:after{
+            width: 120%;
+        }
+        .btns:hover{
+            color: #333333;
+        }
+
+
+
+
+
+    </style>
+    <script>
+        window.onload = ()=>{
+            const slider = new Swiper('.swiper-container',{
+                slidesPerView : "auto",
+                loop : true,
+                autoplay :{
+                    delay : 5000,
+                },
+                effect : 'creative',
+                creativeEffect:{
+                    prev:{
+                        opacity:0
+                    },
+                    next:{
+                        opacity:1
+                    }
+                },
+                pagination:{
+                    el : '.swiper-pagination',
+                    clickable : true
+                },
+                navigation:{
+                    prevEl : '.swiper-button-prev',
+                    nextEl : '.swiper-button-next'
+                }
+
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+            <div class="item1 swiper-slide">
+                <img src="./images/visual1.png">
+
+                <div class="mask one"></div>
+                <div class="mask two"></div>
+                <div class="mask three"></div>
+                <div class="mask four"></div>
+            </div>
+
+            <div class="item2 swiper-slide">
+                <img src="./images/visual2.png">
+
+                <div class="mask one"></div>
+                <div class="mask two"></div>
+                <div class="mask three"></div>
+                <div class="mask four"></div>
+            </div>
+
+            <div class="item3 swiper-slide">
+                <img src="./images/visual3.png">
+
+                <div class="mask one"></div>
+                <div class="mask two"></div>
+                <div class="mask three"></div>
+                <div class="mask four"></div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev btns">PREV</div>
+        <div class="swiper-button-next btns">NEXT</div>
+    </div>
+</body>
+
+</html>

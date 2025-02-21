@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body,html{
+            overflow: hidden;
+        }
+        .slider{
+            width: 1500px;
+            height: 700px;
+            margin: 100px 0px;
+            position: relative;
+            left: 30%;
+            overflow: hidden;
+        }
+        .item{
+            background: gray;
+        }
+        .item img{
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /*pagination*/
+        .swiper-pagination{
+            position: absolute;
+            left:300px!important;
+            top: 400px!important;
+            width: 400px!important;
+        }
+        .swiper-pagination .swiper-pagination-bullet{
+            width: 100%;
+            height: 100px;
+            background: transparent;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            text-align: left;
+            opacity: 1;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .swiper-pagination .swiper-pagination-bullet:after{
+            content: "";
+            width: 600px;
+            height: 5px;
+            background: cyan;
+            position: absolute;
+            left: -600px;
+            bottom: 0px;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .swiper-pagination .swiper-pagination-bullet-active:after{
+            left: 0px;
+            opacity: 1;
+        }
+
+
+        /**/
+        /* .slider{
+            width: 1500px;
+            height: 720px;
+            position: absolute;
+            left: 30%;
+            
+        }
+        .slider .item{
+            height: 520px;
+            margin-right: 40px;
+            position: relative;
+            
+        }
+        .slider .item img{
+            display: block;
+            width: 100%;
+        }
+        .slider .item a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        } */
+        .slider .item a:after,
+        .slider .item a:before{
+            content: "";
+            width: 0px;
+            height: 5px;
+            background-color: cyan;
+            position: absolute;
+            transition: 500ms;
+            z-index: 99;
+            
+        }
+        .slider .item a:before{
+            top: 0px;
+            left: 0px;
+        }
+        .slider .item a:after{
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .slider .item:hover a:before,
+        .slider .item:hover a:after{
+            width: 100%;
+        }
+
+        .slider .item:before,
+        .slider .item:after{
+            content: "";
+            width: 5px;
+            height: 0px;
+            background-color: cyan;
+            position: absolute;
+            transition: 500ms;
+            z-index: 99;
+        }
+        .slider .item:before{
+            left: 0px;
+            bottom: 0px;
+        }
+        .slider .item:after{
+            right: 0px;
+            top: 0px;
+        }
+
+        .slider .item:hover:before,
+        .slider .item:hover:after{
+            height: 100%;
+        }
+
+        .slider .item div{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider .item div:before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,0.5);
+            opacity: 0;
+            z-index: 98;
+            transition: 500ms;
+        }
+
+        .slider .item div:after{
+            content: "";
+            width: 46px;
+            height: 46px;
+            background: url('images/icon_sell_more.png') no-repeat center center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            transition: 500ms;
+            z-index: 99;
+            border: solid 1px #ffffff;
+            opacity: 0;
+        }
+
+        .slider .item div img{
+            transform: scale(1.1);
+            transition: 1500ms;
+        }
+
+        .slider .item:hover div img{
+            transform: scale(1);
+        }
+        .slider .item:hover div:before{
+            opacity: 1;
+        }
+        .slider .item:hover div:after{
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        .indexNum{
+            font-size: 50px;
+        }
+
+    </style>
+
+    <script>
+        window.onload = ()=>{
+            let bullet = ['충남내포신도시2차 대방 엘리움 더 센트럴(RH5-1BL)', '부산에코델타시티1차(31BL)', '화성동탄 문화복합(18BL)', '화성동탄 3차 주상복합(C18BL)']
+            const slider = new Swiper('.swiper-container',{
+                autoplay : {
+                    delay : 3000,
+                },
+                slidesPerView : '2',
+                spaceBetween : '40',
+                loop : true,
+                speed:2000,
+                autoHeight : true, //아이템의 높이값에 맞춤
+                pagination : {
+                    el : '.swiper-pagination',
+                    clickable:true,
+                    renderBullet:function(index, item){
+                        return `<div class="${item}"><span class="indexNum">0${index+1}</span><span>${bullet[index]}</span></div>`
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="swiper-container slider">
+        <div class="swiper-wrapper">
+            <div class="item swiper-slide">
+                <a href="#">
+                    <div>
+                        <img src="images/image01.jpg">
+                    </div>
+                </a>
+            </div>
+            <div class="item swiper-slide">
+                <a href="#">
+                    <div>
+                        <img src="images/image02.jpg">
+                    </div>
+                </a>
+            </div>
+            <div class="item swiper-slide">
+                <a href="#">
+                    <div>
+                        <img src="images/image03.jpg">
+                    </div>
+                </a>
+            </div>
+            <div class="item swiper-slide">
+                <a href="#">
+                    <div>
+                        <img src="images/image04.jpg">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="swiper-pagination"></div>
+</body>
+</html>
