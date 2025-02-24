@@ -1,6 +1,6 @@
 
 
-    let cursor = document.getElementById("cursor");
+let cursor = document.getElementById("cursor");
 let close = document.getElementById("close");
 let body = document.body;
 let iframe = document.getElementById("pen");
@@ -142,6 +142,10 @@ function refresh() {
         ScrollTrigger.refresh();
     }, 2500);
 }
+var footer_tl = gsap.timeline({repeat:-1, ease:Linear.easeNone});
+
+footer_tl.set('.footer-img', { y: -16, delay: .5 })
+    .set('.footer-img', { y: 0, delay: .5 });
 
 window.addEventListener("resize", refresh);
 const year = 2025;
