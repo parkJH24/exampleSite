@@ -6,15 +6,15 @@ import Image from "next/image";
 type Example = {
   id: number;
   title: string;
-  category: string;
-  subCategory?: string;
+  category: string[]; // ✅ 배열로 변경
+  subCategory?: string[];
   link: string;
   thumbnail?: string;
 };
 
 type TabContentProps = {
   activeCategory: string;
-  activeSubCategory?: string; // ✅ subCategory 추가
+  activeSubCategory?: string;
 };
 
 export default function AnimationTabContent({ activeCategory, activeSubCategory }: TabContentProps) {
@@ -25,32 +25,19 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
   useEffect(() => {
     fetch("/data/examples.json")
       .then((res) => res.json())
-      .then((data: Example[]) => {setExamples(data)
-        // console.log(data)
-      })
+      .then((data: Example[]) => setExamples(data))
       .catch((error) => console.error("예제 데이터를 불러오는 중 오류 발생:", error));
   }, []);
-  useEffect(() => {
-    // console.log("현재 필터링된 데이터:", filteredExamples);
-  }, [filteredExamples]);
-  
 
-  // 📌 해당 카테고리만 필터링 (대소문자 일치 처리)
+  // 📌 필터링 로직 수정
   useEffect(() => {
-   
-    if (activeCategory === "Javascript") {
-      // ✅ Animation일 경우 subCategory까지 체크
-      setFilteredExamples(
-        examples.filter(
-          (ex) =>
-            ex.category === "Javascript" &&
-            (activeSubCategory ? ex.subCategory === activeSubCategory : true) // subCategory가 있으면 필터링
-        )
-      );
-    } else {
-      // ✅ 일반 카테고리일 경우 기존 필터링 방식 유지
-      setFilteredExamples(examples.filter((ex) => ex.category === activeCategory));
-    }
+    setFilteredExamples(
+      examples.filter(
+        (ex) =>
+          ex.category.includes(activeCategory) && // ✅ 여러 카테고리를 포함할 수 있도록 변경
+          (activeSubCategory ? ex.subCategory?.includes(activeSubCategory) : true) // ✅ 서브 카테고리도 배열에서 검색
+      )
+    );
   }, [activeCategory, activeSubCategory, examples]);
 
   return (

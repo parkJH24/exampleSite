@@ -6,15 +6,15 @@ import Image from "next/image";
 type Example = {
   id: number;
   title: string;
-  category: string;
-  subCategory?: string;
+  category: string[];  // ✅ 문자열이 아니라 배열로 변경
+  subCategory?: string[];
   link: string;
   thumbnail?: string;
 };
 
 type TabContentProps = {
   activeCategory: string;
-  activeSubCategory?: string; // ✅ subCategory 추가
+  activeSubCategory?: string;
 };
 
 export default function AnimationTabContent({ activeCategory, activeSubCategory }: TabContentProps) {
@@ -26,26 +26,21 @@ export default function AnimationTabContent({ activeCategory, activeSubCategory 
     fetch("/data/examples.json")
       .then((res) => res.json())
       .then((data: Example[]) => {
-        console.log(data)
-        setExamples(data)})
+        console.log(data);
+        setExamples(data);
+      })
       .catch((error) => console.error("예제 데이터를 불러오는 중 오류 발생:", error));
   }, []);
 
   // 📌 카테고리 및 서브카테고리 필터링
   useEffect(() => {
-    if (activeCategory === "Animation") {
-      // ✅ Animation일 경우 subCategory까지 체크
-      setFilteredExamples(
-        examples.filter(
-          (ex) =>
-            ex.category === "Animation" &&
-            (activeSubCategory ? ex.subCategory === activeSubCategory : true) // subCategory가 있으면 필터링
-        )
-      );
-    } else {
-      // ✅ 일반 카테고리일 경우 기존 필터링 방식 유지
-      setFilteredExamples(examples.filter((ex) => ex.category === activeCategory));
-    }
+    setFilteredExamples(
+      examples.filter(
+        (ex) =>
+          ex.category.includes(activeCategory) && // ✅ 여러 카테고리에 속할 수 있도록 변경
+          (activeSubCategory ? ex.subCategory?.includes(activeSubCategory) : true) // ✅ 서브카테고리도 배열에서 체크
+      )
+    );
   }, [activeCategory, activeSubCategory, examples]);
 
   return (

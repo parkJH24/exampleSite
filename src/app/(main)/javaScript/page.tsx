@@ -21,7 +21,7 @@ const JavaScriptPages = () => {
         {/* VisualTextWrapper 추가 */}
         <VisualTextWrapper />
         <div className="mt-[80rem] relative z-11 bg-[#fffdf6]">
-          <section className="bg-[#fffdf6] relative z-11 h-[100vh] ">
+          <section className="bg-[#fffdf6] relative z-11 pb-[20rem]">
             <LineAnimation />
             <div className="lg:flex-row max-w-[160rem] mx-auto items-center justify-center px-6 lg:px-0">
               {/* <AnimationTab /> */}
@@ -39,7 +39,7 @@ const JavaScriptPages = () => {
             </div>
           </section>
   
-          <section ref={sectionRefs.Mouse} className="bg-[#000000] relative z-11 h-[100vh]">
+          <section ref={sectionRefs.Mouse} className="bg-[#000000] relative z-11 pb-[20rem]">
             <LineAnimation strokeColor="#000000" fillColor="#000000" />
             <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
@@ -49,7 +49,7 @@ const JavaScriptPages = () => {
             </div>
           </section>
 
-          <section ref={sectionRefs.Scroll} className="bg-[#fff59b] relative z-11 h-[100vh]">
+          <section ref={sectionRefs.Scroll} className="bg-[#fff59b] relative z-11 pb-[20rem]">
             <LineAnimation strokeColor="#000000" fillColor="#fff59b" />
             <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
@@ -59,7 +59,7 @@ const JavaScriptPages = () => {
             </div>
           </section>
 
-          <section ref={sectionRefs.Slide} className="bg-[#fff] relative z-11 h-[100vh]">
+          <section ref={sectionRefs.Slide} className="bg-[#fff] relative z-11 pb-[20rem]">
             <LineAnimation strokeColor="#fff" fillColor="#fff" />
             <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
@@ -69,7 +69,7 @@ const JavaScriptPages = () => {
             </div>
           </section>
 
-          <section ref={sectionRefs.GSAP} className="bg-[#000000] relative z-11 h-[100vh]">
+          <section ref={sectionRefs.GSAP} className="bg-[#000000] relative z-11pb-[20rem]">
             <LineAnimation strokeColor="#000000" fillColor="#000000" />
             <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">

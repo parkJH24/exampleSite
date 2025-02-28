@@ -27,7 +27,7 @@ export default function JavascriptTab({ sectionRefs }: { sectionRefs: Record<str
   return (
     <div>
       {/* 🔹 탭 메뉴 (기존 디자인 유지 + Hover 적용) */}
-      <div className="flex justify-center items-center gap-6 mb-[12rem] mt-[-10rem]">
+      <div className="lg:flex max-lg:hidden justify-center items-center gap-6 mb-[12rem] mt-[-10rem]">
         {tabs.map((tab, index) => (
           <div key={tab.id} className="flex items-center gap-[3rem]">
             {/* 탭 버튼 (Hover 적용) */}

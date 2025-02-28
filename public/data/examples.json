@@ -45,7 +45,7 @@
         "id": 7,
         "title": "[javaScript , GSAP]슬라이드",
         "category": "Javascript",
-        "subCategory": "Slide",
+        "subCategory": ["Slide","GSAP"],
         "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
         "link": "/examples/Javascript/Slide/ex01/index.html"
       },
@@ -65,14 +65,7 @@
         "thumbnail": "/thumbnails/Javascript/Slide/ex03.jpg",
         "link": "/examples/Javascript/Slide/ex03/index.html"
       },
-      {
-        "id": 10,
-        "title": "[javaScript , GSAP]슬라이드",
-        "category": "Javascript",
-        "subCategory": "GSAP",
-        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
-        "link": "/examples/Javascript/Slide/ex01/index.html"
-      },
+      
       {
         "id": 11,
         "title": "[javaScript]클릭 애니메이션",
@@ -92,8 +85,8 @@
       {
         "id": 13,
         "title": "[javaScript]apple scroll 효과",
-        "category": "Javascript",
-        "subCategory": "Scroll",
+        "category": ["Javascript","Clone"],
+        "subCategory": ["Scroll","Html"],
         "thumbnail": "/thumbnails/Javascript/Scroll/ex02.jpg",
         "link": "/examples/Javascript/Scroll/ex02/index.html"
       },

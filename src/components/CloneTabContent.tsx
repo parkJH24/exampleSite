@@ -6,15 +6,15 @@ import Image from "next/image";
 type Example = {
   id: number;
   title: string;
-  category: string;
-  subCategory?: string;
+  category: string[]; // ✅ 배열로 변경
+  subCategory?: string[];
   link: string;
   thumbnail?: string;
 };
 
 type TabContentProps = {
   activeCategory: string;
-  activeSubCategory?: string; // ✅ subCategory 추가
+  activeSubCategory?: string;
 };
 
 export default function CloneTabContent({ activeCategory, activeSubCategory }: TabContentProps) {
@@ -25,40 +25,37 @@ export default function CloneTabContent({ activeCategory, activeSubCategory }: T
   useEffect(() => {
     fetch("/data/examples.json")
       .then((res) => res.json())
-      .then((data: Example[]) => {
-        console.log(data)
-        setExamples(data)})
+      .then((data: Example[]) => setExamples(data))
       .catch((error) => console.error("예제 데이터를 불러오는 중 오류 발생:", error));
   }, []);
 
-  // 📌 카테고리 및 서브카테고리 필터링
+  // 📌 필터링 로직 수정
   useEffect(() => {
-    if (activeCategory === "Clone") {
-      // ✅ Animation일 경우 subCategory까지 체크
-      setFilteredExamples(
-        examples.filter(
-          (ex) =>
-            ex.category === "Clone" &&
-            (activeSubCategory ? ex.subCategory === activeSubCategory : true) // subCategory가 있으면 필터링
-        )
-      );
-    } else {
-      // ✅ 일반 카테고리일 경우 기존 필터링 방식 유지
-      setFilteredExamples(examples.filter((ex) => ex.category === activeCategory));
-    }
+    setFilteredExamples(
+      examples.filter(
+        (ex) =>
+          ex.category.includes(activeCategory) && // ✅ 여러 카테고리를 포함할 수 있도록 변경
+          (activeSubCategory ? ex.subCategory?.includes(activeSubCategory) : true) // ✅ 서브 카테고리도 배열에서 검색
+      )
+    );
   }, [activeCategory, activeSubCategory, examples]);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3rem]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {filteredExamples.length > 0 ? (
         filteredExamples.map((example) => (
-          <a key={example.id} href={example.link} className="block rounded-lg overflow-hidden" target="_blank">
+          <a
+            key={example.id}
+            href={example.link}
+            target="_blank"
+            className="block rounded-lg overflow-hidden"
+          >
             <Image
               src={example.thumbnail || "/thumbnails/default-thumbnail.jpg"}
               alt={example.title}
               width={400}
               height={250}
-              className="w-full h-[250px] object-cover"
+              className="w-full h-[200px] object-cover"
             />
             <div className="p-4">
               <h3 className="text-[2rem] font-semibold">{example.title}</h3>

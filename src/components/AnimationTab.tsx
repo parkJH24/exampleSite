@@ -22,7 +22,7 @@ export default function AnimationTab({ sectionRefs }: { sectionRefs: Record<stri
   };
 
   return (
-    <div className="flex justify-center items-center gap-6 mb-[12rem] mt-[-10rem]">
+    <div className="justify-center items-center gap-6 mb-[12rem] mt-[-10rem] lg:flex max-lg:hidden">
       {tabs.map((tab, index) => (
         <div key={tab.id} className="flex items-center gap-[3rem]">
           {/* 탭 버튼 (Hover 적용) */}
