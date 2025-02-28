@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration:none;
+    list-style: none;
+}
+body{
+    background: #223055;
+}
+header{
+    width: 100%;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    height: 120px;
+    align-items: center;
+    border-bottom: solid 1px transparent;
+    overflow: hidden;
+    
+}
+
+header:hover{
+    transition: 300ms;
+    border-bottom-color: gray;
+}
+header.on{
+    transition: 300ms;
+    border-bottom-color: gray;
+}
+
+header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+.logo{
+    width: 100px;
+    height: 80px;
+    background: gray;
+}
+.gnb{
+    width: 60%;
+    max-width: 1240px;
+}
+.gnb .main-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.gnb .main-menu >li{
+    position: relative;
+}
+.gnb .main-menu >li >a{
+    padding: 6px 12px;
+    background: transparent;
+    border-radius: 20px;
+    transition: 300ms;
+    color: white;
+    font-weight: bold;
+
+}
+.gnb .main-menu >li >a:hover{
+    background: gray;
+}
+
+.gnb .main-menu .sub-menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    min-width: 200px;
+    
+    opacity: 0;
+}
+.gnb .main-menu .sub-menu li a{
+    color: white;
+    padding: 6px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 200ms;
+}
+.gnb .main-menu .sub-menu li:hover a{
+    text-indent: 10px;
+}
+/* .gnb .main-menu > li:hover .sub-menu{
+    top: 40px;
+    opacity: 1;
+    transition: opacity 300ms, top 600ms;
+} */
+.gnb .main-menu .sub-menu.on{
+    top: 40px;
+    opacity: 1;
+    transition: opacity 300ms, top 600ms;
+}
+.gnb .main-menu .sub-menu li a.on{
+    text-indent: 10px;
+}

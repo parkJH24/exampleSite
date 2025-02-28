@@ -54,7 +54,7 @@
         "title": "[Swiper]슬라이드",
         "category": "Javascript",
         "subCategory": "Slide",
-        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex02.jpg",
         "link": "/examples/Javascript/Slide/ex02/index.html"
       },
       {
@@ -62,8 +62,40 @@
         "title": "[Swiper]슬라이드02",
         "category": "Javascript",
         "subCategory": "Slide",
-        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex03.jpg",
         "link": "/examples/Javascript/Slide/ex03/index.html"
+      },
+      {
+        "id": 10,
+        "title": "[javaScript , GSAP]슬라이드",
+        "category": "Javascript",
+        "subCategory": "GSAP",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Javascript/Slide/ex01/index.html"
+      },
+      {
+        "id": 11,
+        "title": "[javaScript]클릭 애니메이션",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex02.jpg",
+        "link": "/examples/Javascript/Mouse/ex02/index.html"
+      },
+      {
+        "id": 12,
+        "title": "[javaScript]메뉴 효과",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex03.jpg",
+        "link": "/examples/Javascript/Mouse/ex03/index.html"
+      },
+      {
+        "id": 13,
+        "title": "[javaScript]apple scroll 효과",
+        "category": "Javascript",
+        "subCategory": "Scroll",
+        "thumbnail": "/thumbnails/Javascript/Scroll/ex02.jpg",
+        "link": "/examples/Javascript/Scroll/ex02/index.html"
       },
       {
         "id": 99,
