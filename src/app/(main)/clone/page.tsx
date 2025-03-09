@@ -26,7 +26,7 @@ const ClonePages = () => {
           <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
           <CloneTab sectionRefs={sectionRefs} /> {/* 탭 메뉴에 refs 전달 */}
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
-              Basic Animation
+              Html Clone
             </h2>
             <CloneTabContent activeCategory="Clone" activeSubCategory="Html" />
           </div>
@@ -37,7 +37,7 @@ const ClonePages = () => {
           <LineAnimation strokeColor="#ffffff" fillColor="#000000" />
           <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
-              UI Animation
+              Mobile Clone
             </h2>
             <CloneTabContent activeCategory="Clone" activeSubCategory="Mobile" />
           </div>
