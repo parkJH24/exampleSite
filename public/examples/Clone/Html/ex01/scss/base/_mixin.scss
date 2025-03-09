@@ -1,0 +1,105 @@
+//말줄임표 
+@mixin ellips($font-size : 16px, $line : 1 ){
+    $line-height : $font-size * 1.5;
+    $max-height : $line-height * $line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: $font-size;
+    @if($line > 1){
+        line-height: $line-height;
+        max-height: $max-height;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }@else{
+        white-space: nowrap;
+    }
+};
+
+//링크 텍스트 
+
+@mixin link-text-btn($color : $white-color, $type : 'v1'){
+    color: $color;
+    font-size: 16px;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    span{
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        &:after{
+            content: "";
+            width: 0px;
+            height: 1px;
+            background-color: $color;
+            display: block;
+            position: absolute;
+            left: 0px;
+            bottom: -6px; 
+        }
+        
+    }
+    &:hover{
+        span:after{
+            transition: 300ms;
+            width: 100%;
+        }
+    }
+    @if $type =='v2'{
+        span{
+            &:before{
+                content: "";
+                height: 1px;
+                width: 100%;
+                background : $color;
+                display: block;
+                position: absolute;
+                left: 0px;
+                bottom: -6px; 
+            }
+            &:hover:before{
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+/*
+선언된 mixin안에 새로운 스타일을 적용할때 사용하는 선언문
+@content를 넣게 되면 기존 mixin이 가지고 있는 스타일 외에 선택자나 속성등을 새로 추가해서
+작성할 수 있다.
+*/
+@mixin laptop{
+    @media screen and (max-width : $laptop){
+        @content
+    }
+};
+
+@mixin laptop02{
+    @media screen and (max-width : $laptop02){
+        @content
+    }
+};
+
+@mixin tablet{
+    @media screen and (max-width : $tablet){
+        @content
+    }
+};
+@mixin mobile{
+    @media screen and (max-width : $mobile){
+        @content
+    }
+}
+
+
+
+

@@ -1,6 +1,4 @@
-
-
-button{
+button {
     background: transparent;
     border: none;
     outline: none;
@@ -19,6 +17,8 @@ button{
 .visual-wrapper {
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
+    min-height: 640px;
     position: relative;
     overflow: hidden;
 }
@@ -26,6 +26,9 @@ button{
 .visual-wrapper .swiper-container {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .visual-wrapper .swiper-slide {
@@ -53,6 +56,12 @@ button{
     height: 100%;
     background-size: cover;
     background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
 }
 
 .content-bg {
@@ -98,38 +107,79 @@ button{
 }
 
 /* 이미지 */
-.item01 .content-bg {
+.content-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.item01 .content-bg.pc {
     background-image: url(../images/main-visual01.jpg);
 }
 
-.item02 .content-bg {
+.item02 .content-bg.pc {
     background-image: url(../images/main-visual02.jpg);
 }
 
-.item03 .content-bg {
+.item03 .content-bg.pc {
     background-image: url(../images/main-visual03.jpg);
 }
 
-.item04 .content-bg {
+.item04 .content-bg.pc {
     background-image: url(../images/main-visual04.jpg);
 }
 
-.item05 .content-bg {
+.item05 .content-bg.pc {
     background-image: url(../images/main-visual05.jpg);
 }
 
-.item06 .content-bg {
+.item06 .content-bg.pc {
     background-image: url(../images/main-visual06.jpg);
 }
 
-.item07 .content-bg {
+.item07 .content-bg.pc {
     background-image: url(../images/main-visual07.jpg);
 }
 
-.item08 .content-bg {
+.item08 .content-bg.pc {
     background-image: url(../images/main-visual09.jpg);
 }
+.content-bg.mobile{
+    display: none;
+}
+/* 모바일 이미지 */
+.item01 .content-bg.mobile {
+    background-image: url(../images/main-visual-m01.jpg);
+}
 
+.item02 .content-bg.mobile {
+    background-image: url(../images/main-visual-m02.jpg);
+}
+
+.item03 .content-bg.mobile {
+    background-image: url(../images/main-visual-m03.jpg);
+}
+
+.item04 .content-bg.mobile {
+    background-image: url(../images/main-visual-m04.jpg);
+}
+
+.item05 .content-bg.mobile {
+    background-image: url(../images/main-visual-m05.jpg);
+}
+
+.item06 .content-bg.mobile {
+    background-image: url(../images/main-visual-m06.jpg);
+}
+
+.item07 .content-bg.mobile {
+    background-image: url(../images/main-visual-m07.jpg);
+}
+
+.item08 .content-bg.mobile {
+    background-image: url(../images/main-visual-m09.jpg);
+}
 /* 텍스트 애니메이션 */
 
 .text-anim-container {
@@ -195,19 +245,19 @@ button{
 
 .text-link .link-item {
     display: flex;
-    gap: 80px;
+    gap: 60px;
     pointer-events: auto;
 }
 
 .text-link a {
     font-size: 16px;
-  display: inline-flex;
-  gap: 6px;
-  align-items: center;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  color: #fff;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: #fff;
 }
 
 .text-link .link-item a span {
@@ -244,39 +294,43 @@ button{
     align-items: center;
     gap: 24px;
     z-index: 9;
-  }
-  .visual-wrapper .visual-control .swiper-pagination {
+}
+
+.visual-wrapper .visual-control .swiper-pagination {
     position: static;
-  }
-  .visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet {
+}
+
+.visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     border: solid 2px transparent;
     background-clip: padding-box;
-  }
-  .visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: transparent;
     border-color: #ffffff;
-  }
-  .visual-wrapper .visual-control ul {
+}
+
+.visual-wrapper .visual-control .swiper-pagination {
     display: flex;
-    gap: 16px;
-  }
-  .visual-wrapper .visual-control ul li {
+}
+
+.visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     border: solid 2px transparent;
     background-clip: padding-box;
-  }
-  .visual-wrapper .visual-control ul li:first-of-type {
-    border-color: #ffffff;
-    background: transparent;
-  }
-  .visual-wrapper .visual-control .pause-btn {
+}
+
+
+
+.visual-wrapper .visual-control .pause-btn {
     width: 20px;
     height: 20px;
     font-size: 16px;
@@ -285,13 +339,137 @@ button{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-  .visual-wrapper .visual-control .pause-btn .bx-play {
+}
+
+.visual-wrapper .visual-control .pause-btn .bx-play {
     display: none;
-  }
-  .visual-wrapper .visual-control .pause-btn.on .bx-pause {
+}
+
+.visual-wrapper .visual-control .pause-btn.on .bx-pause {
     display: none;
-  }
-  .visual-wrapper .visual-control .pause-btn.on .bx-play {
+}
+
+.visual-wrapper .visual-control .pause-btn.on .bx-play {
     display: block;
-  }
+}
+
+@media screen and (max-width : 1600px) {
+    .text-nodes {
+        padding-left: 248px;
+        padding-top: 60px;
+    }
+
+    .swiper-slide:after {
+        width: 248px;
+    }
+
+    .text-nodes h3 {
+        font-size: 20px;
+    }
+
+    .text-nodes h2 {
+        font-size: 60px;
+    }
+
+    .text-link {
+        left: 248px;
+    }
+
+    .visual-wrapper .visual-control {
+        gap: 20px;
+    }
+
+    .visual-wrapper .visual-control .swiper-pagination .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media screen and (max-width : 1360px) {
+    .visual-wrapper {
+        height: auto;
+        padding-top: 57%;
+        min-height: 0px;
+    }
+
+    .text-nodes {
+        padding-left: 224px;
+    }
+
+    .swiper-slide:after {
+        width: 224px;
+    }
+
+    .text-nodes h3 {
+        font-size: 18px;
+    }
+
+    .text-nodes h2 {
+        font-size: 48px;
+    }
+
+    .text-link {
+        bottom: 24%;
+        left: 224px;
+    }
+
+    .visual-wrapper .visual-control {
+        bottom: 7%;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .text-nodes {
+        padding-left: 56px;
+        padding-top: 10px;
+    }
+
+    .swiper-slide:after {
+        display: none;
+    }
+    .text-link {
+        left: 56px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .visual-wrapper {
+        height: 100vh;
+        padding-top: 0px;
+    }
+    .content-bg.pc{
+        display: none;
+    }
+    .content-bg.mobile{
+        display: block;
+    }
+    .text-nodes {
+        padding-left: 20px;
+        padding-top: 40px;
+    }
+
+    .text-nodes h3 {
+        font-size: 16px;
+    }
+
+    .text-nodes h2 {
+        font-size: 42px;
+    }
+
+    .text-link {
+        bottom: 80px;
+        left: 20px;
+        
+    }
+    .text-link .link-item{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .text-link a{
+        font-size: 16px;
+    }
+
+    .visual-wrapper .visual-control {
+        bottom: 20px;
+    }
+}

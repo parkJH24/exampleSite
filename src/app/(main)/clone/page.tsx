@@ -9,11 +9,9 @@ import CloneTab from "@/components/CloneTab";
 const ClonePages = () => {
   // 📌 각 섹션의 ref 생성
   const sectionRefs = {
-    Basic: useRef<HTMLDivElement>(null),
-    UI: useRef<HTMLDivElement>(null),
-    Text: useRef<HTMLDivElement>(null),
-    Transition: useRef<HTMLDivElement>(null),
-    GSAP: useRef<HTMLDivElement>(null),
+    Html: useRef<HTMLDivElement>(null),
+    Mobile: useRef<HTMLDivElement>(null),
+    React: useRef<HTMLDivElement>(null),
   };
 
   return (
@@ -23,7 +21,7 @@ const ClonePages = () => {
 
       <div className="mt-[80rem] relative z-11 bg-[#fffdf6]">
         {/* 🔹 Html Css Clone */}
-        <section ref={sectionRefs.Basic} className="bg-[#fffdf6] relative z-11 pb-[20rem]">
+        <section ref={sectionRefs.Html} className="bg-[#fffdf6] relative z-11 pb-[20rem]">
           <LineAnimation />
           <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
           <CloneTab sectionRefs={sectionRefs} /> {/* 탭 메뉴에 refs 전달 */}
@@ -35,7 +33,7 @@ const ClonePages = () => {
         </section>
 
         {/* 🔹 Mobile Clone */}
-        <section ref={sectionRefs.UI} className="bg-[#000000] text-white relative z-11 pb-[20rem]">
+        <section ref={sectionRefs.Mobile} className="bg-[#000000] text-white relative z-11 pb-[20rem]">
           <LineAnimation strokeColor="#ffffff" fillColor="#000000" />
           <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
@@ -46,7 +44,7 @@ const ClonePages = () => {
         </section>
 
         {/* 🔹 React Clone */}
-        <section ref={sectionRefs.Text} className="bg-[#ffdeac] relative z-11 pb-[20rem]">
+        <section ref={sectionRefs.React} className="bg-[#ffdeac] relative z-11 pb-[20rem]">
           <LineAnimation strokeColor="#000000" fillColor="#ffdeac" />
           <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">

@@ -1,0 +1,142 @@
+.inner{
+    width: auto;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px 140px;
+}
+//대체 텍스트 
+.blind{
+    /*
+    대체 텍스트 기법
+    display : none = 화면에서 사라지지만 리더기에서도 읽히지 않는다.
+    position : absolute; left : -9999px// 과부화를 줄 수 있다.
+    text-indent : -9999px  과부하를 줄 수 있다.
+    */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /*영역에 1px씩 주는 이유는 컨텐츠를 인식할 수 있게 최소한의 크기*/
+    overflow: hidden;//넘치는 영역에서 보이지 않게 함
+    visibility: hidden; //해당 영역을 보이지 않게 하지만 공간은 존재
+    margin: -1px;
+    clip-path: inset(-50%);
+    //clip-path : 포토샵의 마스크와 같은 기능
+    //clip은 더 이상 사용하지 않는 css이며 clip-path로 대체되었다.
+}
+body,html{
+    font-size: 16px;
+    font-family: $text;
+    line-height: 1; //단위가 생략되면 폰트사이즈의 비율로 계산됨
+    background: $bg-color;
+    letter-spacing: -0.5px;
+}
+.skip-menu li a{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    color: $white-color;
+    text-align: center;
+    z-index: 9999;
+    background: $bg-color;
+    &:focus{
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;   
+    }
+
+}
+.mobile{
+    display: none;
+}
+.no-scroll{
+    overflow: hidden;
+}
+
+.dic-btn{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 56px;
+    border: solid 1px $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white-color;
+    box-sizing: border-box;
+    transition: 600ms;
+    font-size: 16px;
+    z-index: 1;
+    &:after{
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: $white-color;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0;
+        transition: width 0ms 600ms, opacity 600ms 0ms;
+    }
+    &:hover:after{
+        width: 100%;
+        opacity: 1;
+        transition: width 600ms 0ms, opacity 0ms;
+    }
+    &:hover{
+        color: $black;
+    }
+
+
+}
+
+.chat-wrapper{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 40px;
+    bottom: 40px;
+    z-index: 9999;
+    .chat-btn{
+        background: url(../../images/g_fab_hovered_202304.svg) no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+
+@include laptop{
+    .inner{
+        padding: 0px 100px;
+    }
+}
+
+@include laptop02{
+    .inner{
+        padding: 0px 75px;
+    }
+}
+@include tablet{
+    .inner{
+        padding: 0px 20px;
+    }
+}
+
+@include mobile{
+    .pc{
+        display: none!important;
+    }
+    .mobile{
+        display: block!important;
+    }
+}
