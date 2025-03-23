@@ -190,7 +190,7 @@ function generateCalendar(year, month, dday) { // ✅ year, month를 매개변�
     }
 }
 
-window.onload = function () {
+
     const container = document.getElementById('map');
     const options = {
       center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청 예시
@@ -212,6 +212,6 @@ window.onload = function () {
       content: iwContent
     });
     infowindow.open(map, marker);
-  }
+  
 
 
