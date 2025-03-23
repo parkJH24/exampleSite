@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -21,18 +21,16 @@
     <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script>
     <!-- head 태그 안에 추가 -->
-    
 
-    
+
+
 
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0508fc44c0e97b745643887ef9d115e8"></script>
-        <script src="./js/common.js" defer></script>
+    <script src="./js/common.js" defer></script>
 
 </head>
 
-<body>
-    <!-- partial:index.partial.html -->
     <div id='wrap'>
         <h1 data-splitting='words'>first year</h1>
         <p class='subhead'>Park Tae Yi</p>
@@ -79,7 +77,7 @@
             </div>
 
             <div class="calendar">
-                <p class="calendarTitle">돌잔치 안내</p>
+                <!-- <p class="calendarTitle">돌잔치 안내</p> -->
                 <table id="calendarTable">
                     <thead>
                         <tr>
@@ -106,7 +104,7 @@
 
             </div>
             <div class="timeline">
-                <p class="timelineTitle">성장 타임라인</p>
+                <!-- <p class="timelineTitle">성장 타임라인</p> -->
                 <ul class="timeline-list">
                     <li>
                         <div class="timeline-text">세상에 나온 날</div>
@@ -185,21 +183,46 @@
             </div>
 
         </div>
-        <!-- <div class='panel'>
-            <h2 data-splitting='words'>Guest Book</h2>
-            <div class='thumb'>
-                <p>2025 • 04 • 12</p>
-                <div class='inner'>
-                    <img src="./images/bg.jpg">
-                </div>
-            </div>
-        </div> -->
+    
         <div class="panel section04">
             <h2 data-splitting='words'>Location</h2>
-            <div class="map-wrap">
-                <div id="map" style="width:100%;height:350px;"></div>
+            <div class="section04-btn-wrapper">
+                <!-- <button id="toggleLockBtn">🔒 지도 잠금</button> -->
+                <p class="toggle-text">🔒 지도가 잠겨있어요.</p>
+                 <div class="toggle-btn">
+                    <input type="checkbox" id="btn">
+                    <label for="btn"></label>
+                 </div>
+                
+            </div>
+            
+
+            <div class='thumb'>
+                <!-- <p>오시는 길</p> -->
+                <div class='inner'>
+                    <div id="map" style="width:100%;height:350px;"></div>
+                </div>
+
+            </div>
+            <div class="section04-info">
+                
+                <a href="https://map.kakao.com/link/map/햇살맛집 강서구 개화동559-63,37.57600893768424, 126.8026139571082"
+                    target="_blank" class="link-btn">카카오맵 이동</a>
+                <!-- <div class="text">
+                    <p><span>주차</span>돌잔치 장소 인근에 주차가능 합니다.</p>
+                    <div>
+                        <p class="title"><span>지하철</span></p>
+                        <p><span>⑨개화역</span>1번 출구에서 10분거리</p>
+                        <p><span>⑤개화산역</span>2번 출구에서 10분거리 </p>
+                    </div>
+                    
+                </div> -->
+
+
+
             </div>
         </div>
+
         <div class='panel section05'>
             <h2 data-splitting='words'>Gallery Book</h2>
             <div class='thumb'>
@@ -226,30 +249,15 @@
     <div class="footer">
         <div class="footer-img"></div>
         <div class="footer-content">
-            <p class='subhead final'>Good Bye🖐</p>
+            <p class='subhead final'>4월 12일에 만나요🖐</p>
         </div>
     </div>
 
     <div id='cursor'>
         <strong class='circle' data-splitting='chars'>SEE•MORE•</strong>
     </div>
-    <!-- <div id='loader'>
-        <div class='wrap'>
-            <span>L</span>
-            <span>O</span>
-            <span>A</span>
-            <span>D</span>
-            <span>I</span>
-            <span>N</span>
-            <span>G</span>
-            <span>•</span>
-            <span>•</span>
-            <span>•</span>
-        </div>
-    </div> -->
-
-    <!-- partial -->
     
+
 
 
 </body>
