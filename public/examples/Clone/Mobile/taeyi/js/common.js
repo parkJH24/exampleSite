@@ -192,7 +192,6 @@ function generateCalendar(year, month, dday) { // ✅ year, month를 매개변�
 
 
 const container = document.getElementById('map');
-console.log(kakao)
 const options = {
     center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청 예시
     level: 3
