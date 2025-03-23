@@ -142,7 +142,7 @@ function refresh() {
         ScrollTrigger.refresh();
     }, 2500);
 }
-var footer_tl = gsap.timeline({repeat:-1, ease:Linear.easeNone});
+var footer_tl = gsap.timeline({ repeat: -1, ease: Linear.easeNone });
 
 footer_tl.set('.footer-img', { y: -16, delay: .5 })
     .set('.footer-img', { y: 0, delay: .5 });
@@ -191,27 +191,29 @@ function generateCalendar(year, month, dday) { // ✅ year, month를 매개변�
 }
 
 
-    const container = document.getElementById('map');
-    const options = {
-      center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청 예시
-      level: 3
-    };
+const container = document.getElementById('map');
+console.log(kakao)
+const options = {
+    center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 시청 예시
+    level: 3
+};
 
-    const map = new kakao.maps.Map(container, options);
 
-    // 마커 추가
-    const markerPosition = new kakao.maps.LatLng(37.5665, 126.9780);
-    const marker = new kakao.maps.Marker({
-      position: markerPosition
-    });
-    marker.setMap(map);
+const map = new kakao.maps.Map(container, options);
 
-    // 인포윈도우 (간단한 설명)
-    const iwContent = '<div style="padding:5px;">돌잔치 장소<br><a href="https://map.kakao.com/link/map/돌잔치장소명,37.5665,126.9780" style="color:blue" target="_blank">큰지도보기</a></div>';
-    const infowindow = new kakao.maps.InfoWindow({
-      content: iwContent
-    });
-    infowindow.open(map, marker);
-  
+// 마커 추가
+const markerPosition = new kakao.maps.LatLng(37.5665, 126.9780);
+const marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+marker.setMap(map);
+
+// 인포윈도우 (간단한 설명)
+const iwContent = '<div style="padding:5px;">돌잔치 장소<br><a href="https://map.kakao.com/link/map/돌잔치장소명,37.5665,126.9780" style="color:blue" target="_blank">큰지도보기</a></div>';
+const infowindow = new kakao.maps.InfoWindow({
+    content: iwContent
+});
+infowindow.open(map, marker);
+
 
 
