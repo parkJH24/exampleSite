@@ -30,7 +30,7 @@
     <script src="./js/common.js" defer></script>
 
 </head>
-
+<div class="container">
     <div id='wrap'>
         <h1 data-splitting='words'>first year</h1>
         <p class='subhead'>Park Tae Yi</p>
@@ -183,19 +183,19 @@
             </div>
 
         </div>
-    
+
         <div class="panel section04">
             <h2 data-splitting='words'>Location</h2>
             <div class="section04-btn-wrapper">
                 <!-- <button id="toggleLockBtn">🔒 지도 잠금</button> -->
                 <p class="toggle-text">🔒 지도가 잠겨있어요.</p>
-                 <div class="toggle-btn">
+                <div class="toggle-btn">
                     <input type="checkbox" id="btn">
                     <label for="btn"></label>
-                 </div>
-                
+                </div>
+
             </div>
-            
+
 
             <div class='thumb'>
                 <!-- <p>오시는 길</p> -->
@@ -205,18 +205,18 @@
 
             </div>
             <div class="section04-info">
-                
+
                 <a href="https://map.kakao.com/link/map/햇살맛집 강서구 개화동559-63,37.57600893768424, 126.8026139571082"
                     target="_blank" class="link-btn">카카오맵 이동</a>
                 <!-- <div class="text">
-                    <p><span>주차</span>돌잔치 장소 인근에 주차가능 합니다.</p>
-                    <div>
-                        <p class="title"><span>지하철</span></p>
-                        <p><span>⑨개화역</span>1번 출구에서 10분거리</p>
-                        <p><span>⑤개화산역</span>2번 출구에서 10분거리 </p>
-                    </div>
-                    
-                </div> -->
+                        <p><span>주차</span>돌잔치 장소 인근에 주차가능 합니다.</p>
+                        <div>
+                            <p class="title"><span>지하철</span></p>
+                            <p><span>⑨개화역</span>1번 출구에서 10분거리</p>
+                            <p><span>⑤개화산역</span>2번 출구에서 10분거리 </p>
+                        </div>
+                        
+                    </div> -->
 
 
 
@@ -233,17 +233,15 @@
             </div>
 
             <!-- <div class="gallery">
-                <ul class="gallery-list">
-                    <li>
-                        <div class="gallery-img">
-                            <img src="./images/bg.jpg">
-                        </div>
-                    </li>
-                </ul>
-            </div> -->
+                    <ul class="gallery-list">
+                        <li>
+                            <div class="gallery-img">
+                                <img src="./images/bg.jpg">
+                            </div>
+                        </li>
+                    </ul>
+                </div> -->
         </div>
-
-
 
     </div>
     <div class="footer">
@@ -252,11 +250,26 @@
             <p class='subhead final'>4월 12일에 만나요🖐</p>
         </div>
     </div>
-
-    <div id='cursor'>
-        <strong class='circle' data-splitting='chars'>SEE•MORE•</strong>
+</div>
+<!-- container -->
+<div id='frame'>
+    <div id='close'>
+        <div></div>
+        <strong class='circle' data-splitting='chars'>GO•BACK•</strong>
     </div>
-    
+    <div class='frame-wrap'>
+        <div class='frame-container'>
+            <iframe id='pen' loading='lazy' src='' style='border:0'></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<div id='cursor'>
+    <strong class='circle' data-splitting='chars'>SEE•MORE•</strong>
+</div>
+
 
 
 

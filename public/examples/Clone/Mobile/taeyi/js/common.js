@@ -393,11 +393,13 @@
 
 window.onload = () => {
     initCustomCursor();
-    initEscapeKeyClose();
+    // initEscapeKeyClose();
+    initFrameEvents()
     initScrollAnimations();
+    // openFrame();
     initPreloader();
     initCalendar(2025, 4, 12);
-    initKakaoMap();
+    // initKakaoMap();
 }
 
 function initCustomCursor() {
@@ -427,21 +429,56 @@ function initCustomCursor() {
     });
 }
 
-function initEscapeKeyClose() {
+function initFrameEvents() {
     const body = document.body;
     const iframe = document.getElementById("pen");
-    if (!iframe) return;
-
-    document.onkeydown = function (evt) {
-        const isEscape = evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27;
-        if (isEscape) {
-            body.classList.remove("active");
-            setTimeout(() => {
-                iframe.setAttribute("src", "");
-            }, 2000);
+    const openTrigger = document.querySelector('.section05 .inner');
+    const close = document.getElementById("close");
+  
+    // 1. 클릭 시 frame 열기
+    if (openTrigger) {
+      openTrigger.addEventListener('click', function () {
+        body.classList.add("active");
+      });
+    }
+  
+    // 2. ESC 키로 닫기
+    document.addEventListener("keydown", function (evt) {
+      const isEscape = evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27;
+      if (isEscape) {
+        body.classList.remove("active");
+  
+        if (iframe) {
+          setTimeout(() => {
+            iframe.setAttribute("src", "");
+          }, 2000);
         }
-    };
-}
+      }
+    });
+    close.addEventListener("click", function (event) {
+        body.classList.remove("active");
+        setTimeout(() => {
+          iframe.setAttribute("src", "");
+        }, 2000);
+      });
+  }
+  
+
+// function initEscapeKeyClose() {
+//     const body = document.body;
+//     const iframe = document.getElementById("pen");
+//     if (!iframe) return;
+
+//     document.onkeydown = function (evt) {
+//         const isEscape = evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27;
+//         if (isEscape) {
+//             body.classList.remove("active");
+//             setTimeout(() => {
+//                 iframe.setAttribute("src", "");
+//             }, 2000);
+//         }
+//     };
+// }
 
 function initScrollAnimations() {
     Splitting();
@@ -483,7 +520,13 @@ function initScrollAnimations() {
         }, 2500);
     });
 }
+// function openFrame(){
+//     const item = document.querySelector('.section05 .inner');
 
+//     item.addEventListener('click',function(){
+//         document.body.classList.add("active");
+//     })
+// }
 function initPreloader() {
     document.body.classList.add("loaded");
 }

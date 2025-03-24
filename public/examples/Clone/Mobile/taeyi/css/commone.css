@@ -1282,3 +1282,319 @@ body #wrap .panel.section04 .section04-info .text {
     transform: translateY(16px);
   }
 }
+
+
+/* frame */
+body.active {
+  cursor: auto;
+  overflow: hidden;
+}
+body.active #frame .frame-container #penlink {
+  transform: rotate(0deg);
+  transition-delay: 0.3s, 2s;
+}
+body.active #frame .frame-container #penlink span {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+body.active #wrap {
+  transform: translateX(-125vw);
+  transition-delay: 0s;
+}
+body.active #wrap .panel h2 span.word:before {
+  transform: translate(-50%, 100px);
+  transition: 0s ease-in-out;
+  transition-delay: 0s;
+}
+body.active #frame {
+  transform: translateX(0);
+  transition-delay: 0.25s;
+}
+body.active #frame #close {
+  transform: rotate(180deg) scale(1);
+  transition-delay: 1.2s, 0s;
+}
+body.active #frame #close strong .word {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+body.active #frame #close strong span.char:before {
+  transform: translateY(0);
+}
+body.active #frame #close:hover {
+  box-shadow: 0 0 0 2px #fe4e01, inset 0 0 0 20px #fe4e01, 0 0 0 20px #eeece5, 0 0 0 22px #fe4e01;
+}
+body.active #frame #close:hover strong span.char:before {
+  color: #08350e;
+}
+body.active #frame #close div {
+  transition-delay: 1.8s;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body.active #frame #close:before, body.active #frame #close:after {
+  transition-delay: 2.1s;
+}
+body.active #frame #close:before {
+  transform: scaleY(1) rotate(-45deg);
+}
+body.active #frame #close:after {
+  transform: scaleY(1) rotate(45deg);
+}
+body.active #frame:before, body.active #frame:after {
+  transition-delay: 0.75s;
+  transform: translateX(-175%) skewX(5deg);
+}
+body.active #frame:after {
+  transform: translateX(-150%) skewX(-15deg);
+}
+body.active #frame .frame-container iframe {
+  -webkit-clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%);
+          clip-path: polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%);
+  visibility: visible;
+  opacity: 1;
+}
+body #close strong.circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body #close strong.circle span.word span.char:before {
+  color: #fe4e01;
+}
+body #close strong.circle span.word span.char:nth-of-type(1) {
+  transform: rotate(0deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(3) {
+  transform: rotate(90deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(4) {
+  transform: rotate(135deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(5) {
+  transform: rotate(180deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(6) {
+  transform: rotate(225deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(7) {
+  transform: rotate(270deg);
+}
+body #close strong.circle span.word span.char:nth-of-type(8) {
+  transform: rotate(315deg);
+}
+
+body #frame {
+  position: fixed;
+  z-index: 98;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eeece5;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  transition: 0.5s cubic-bezier(1, 0.885, 0.32, 1);
+  transform: translateX(125%);
+  transition-delay: 0.5s;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: transform;
+}
+body #frame:before, body #frame:after {
+  content: "";
+  position: absolute;
+  width: 125%;
+  height: 100%;
+  top: 0;
+  left: -12.5%;
+  background: #fe4e01;
+  transition: transform 1s cubic-bezier(1, 0.885, 0.32, 1);
+  transition-delay: 0.25s;
+  z-index: 999;
+  transform: translateX(0) skewX(5deg);
+}
+body #frame:after {
+  z-index: 98;
+  background: linear-gradient(to right, #eeece5 75%, #a58725 100%);
+  width: 125%;
+  transition: transform 1.25s cubic-bezier(1, 0.885, 0.32, 1);
+}
+body #frame #close {
+  z-index: 999;
+  left: 45px;
+  top: 45px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 0 2px #08350e, inset 0 0 0 #fe4e01, 0 0 0 20px #eeece5, 0 0 0 22px #fe4e01;
+  background: #eeece5;
+  border-radius: 100%;
+  position: absolute;
+  cursor: pointer;
+  transform: rotate(180deg) scale(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+body #frame #close:hover div {
+  background: #eeece5;
+}
+body #frame #close:hover:before, body #frame #close:hover:after {
+  background: #eeece5;
+}
+body #frame #close div {
+  position: absolute;
+  top: calc(50% - 1px);
+  width: 20px;
+  left: 5px;
+  height: 2px;
+  background: #08350e;
+  transition: transform 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+body #frame #close div:before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  top: -40px;
+  left: -30px;
+}
+body #frame #close:before, body #frame #close:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #08350e;
+  top: calc(50% - 1px);
+  left: 14px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s;
+  transform-origin: right;
+  transform: scaleY(0) rotate(0deg);
+  z-index: 9;
+}
+body #frame .frame-wrap {
+  width: calc(100% - 10vw);
+  height: calc(100% - 10vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #frame .frame-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body #frame .frame-container #penlink {
+  position: absolute;
+  bottom: -10px;
+  text-decoration: none;
+  color: #fe4e01;
+  font-weight: 900;
+  transition: color 0.2s ease-in-out, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.2s;
+  letter-spacing: -2px;
+  padding: 10px 15px;
+  z-index: 9;
+  transform-origin: 50% 12.5vh;
+  transform: rotate(-180deg);
+  position: absolute;
+}
+body #frame .frame-container #penlink:after {
+  z-index: -5;
+}
+body #frame .frame-container #penlink:hover {
+  color: #eeece5;
+}
+body #frame .frame-container #penlink strong {
+  position: relative;
+  z-index: 9;
+}
+body #frame .frame-container #penlink span {
+  display: inline-block;
+  -webkit-animation: back-n-forth 0.5s ease-in-out infinite alternate;
+          animation: back-n-forth 0.5s ease-in-out infinite alternate;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes back-n-forth {
+  to {
+    transform: translateX(-2.5px);
+  }
+}
+@keyframes back-n-forth {
+  to {
+    transform: translateX(-2.5px);
+  }
+}
+body #frame .frame-container #penlink:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #fe4e01 50%, #a58725 50%) 50% 100%/100% 200% no-repeat;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out;
+  transition-delay: 0.5s, 0.6s;
+}
+body #frame .frame-container #penlink:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #08350e 0%, #08350e 100%), linear-gradient(to top, #08350e 50%, transparent 50%), linear-gradient(to top, #08350e 50%, transparent 50%), linear-gradient(to right, #08350e 0%, #08350e 100%), linear-gradient(to left, #08350e 0%, #08350e 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transform: scaleX(0) rotate(0deg);
+  transition-delay: 0.4s, 0.2s, 0s, 0.6s;
+}
+body #frame .frame-container #penlink:hover:after {
+  transform: scaleY(1);
+  transform-origin: top;
+  background-position: 50% 0%;
+}
+body #frame .frame-container #penlink:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(0deg);
+  transition-delay: 0s, 0.2s, 0.4s;
+}
+body #frame .frame-container iframe {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  background: #fff;
+  border-radius: 5px;
+  visibility: hidden;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: visibility 0s linear, opacity 1s ease-in-out, -webkit-clip-path 0s linear;
+  transition: clip-path 0s linear, visibility 0s linear, opacity 1s ease-in-out;
+  transition: clip-path 0s linear, visibility 0s linear, opacity 1s ease-in-out, -webkit-clip-path 0s linear;
+  transition-delay: 0.75s, 0.75s, 1.25s;
+  opacity: 0;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
