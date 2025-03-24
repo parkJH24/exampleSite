@@ -1,0 +1,248 @@
+.section03 {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* section04 */
+.section04 {
+    width: 100%;
+    height: 100vh;
+}
+
+.section04 .inner {
+    position: relative;
+    height: 100%;
+    background: #000;
+}
+
+.section04 .inner .contentWrap {
+    width: 408px;
+    height: 810px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.section04 .inner .contentWrap .devieceWrap {
+    width: 408px;
+    height: 830px;
+    overflow: hidden;
+}
+
+.section04 .inner .contentWrap .devieceWrap img {
+    width: 100%;
+    object-fit: cover
+}
+
+.section04 .inner .contentWrap .bgWrap {
+    width: 90%;
+    height: 98%;
+    z-index: 1;
+    position: absolute;
+    background: #fff;
+
+    inset: 3% 5%;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.section04 .inner .textWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+
+.section04 .inner .textWrap .textWrapImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    /* clip-path: inset(30px 550px round 0.8183em); */
+
+}
+
+.section04 .inner .textWrap .textWrapImg video {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.section04 .inner .textWrap h2 {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 80px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.section04 .inner .textWrap p {
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.section04 .inner .contentWrap02 {
+    width: 360px;
+    height: 780px;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%,-50%); */
+    margin-top: -390px;
+    margin-left: -180px;
+}
+
+.section04 .inner .contentWrap02 .content02Bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    border-radius: 40px;
+}
+
+.section04 .inner .contentWrap02 .deviceWrap02 {
+    width: 400px;
+    height: 850px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 425px);
+    /* transform: translateX(-50%); */
+    z-index: 2;
+
+}
+
+.section04 .inner .contentWrap02 .deviceWrap02 img {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.section04 .inner .contentWrap02 .content02List {
+    position: relative;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 780px;
+    padding-top: 30px;
+    contain: layout style paint;
+    clip-path: inset(0 round 50px);
+    /* margin-top: 40px; */
+}
+
+.section04 .inner .contentWrap02 .content02List>div {
+    position: relative;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    /* background: gray; */
+    margin: 12px 0px;
+    border-radius: 40px;
+    position: relative;
+}
+
+.section04 .inner .contentWrap02 .content02List .itemWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+.section04 .inner .contentWrap02 .content02List .item01 .itemWrap {
+    opacity: 0;
+}
+
+.section04 .inner .contentWrap02 .content02List video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.section04 .inner .contentWrap02 .homeBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 0 0 32px 32px;
+}
+.section04 .inner .contentWrap02 .homeBar img{
+    width: 100%;
+    height: auto;
+}
+.section04 .inner .contentWrap02Text{
+    position: relative;
+    color: #fff;
+    left: 20%;
+    width: 1200px;
+    height: 100%;
+    z-index: 11;
+    top: 10%;
+}
+.section04 .inner .contentWrap02Text .textBox{
+    position: absolute;
+    transform: translateY(500px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    /* width: 450px; */
+
+}
+.section04 .inner .contentWrap02Text .textBox span{
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+.section04 .inner .contentWrap02Text .textBox h3{
+    font-size: 60px;
+    text-align: right;
+    font-weight: bold;
+}
+.section04 .inner .contentWrap02Text .textBox p{
+    font-size: 20px;
+    text-align: right;
+}
+.section04 .inner .contentWrap02Text .textBox.text03{
+    right: 0;
+    /* transform: translateY(400px); */
+
+}
+.section04 .inner .contentWrap02Text .text03 span{
+    text-align: right;
+}

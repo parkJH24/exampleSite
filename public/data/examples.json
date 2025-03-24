@@ -1,28 +1,6 @@
 [
-    {
-        "id": 1,
-        "title": "CSS Keyframe Animation",
-        "category": "Animation",
-        "subCategory": "Transition",
-        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
-        "link": "/examples/Animation/Transition/ex01/index.html"
-      },
-      {
-        "id": 2,
-        "title": "CSS Keyframe Animation",
-        "category": "Animation",
-        "subCategory": "Transition",
-        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
-        "link":"/examples/Animation/Transition/ex01/index.html"
-      },
-      {
-        "id": 3,
-        "title": "CSS Keyframe Animation",
-        "category": "Animation",
-        "subCategory": "Transition",
-        "thumbnail": "/thumbnails/Animation/Transition/ex01.jpg",
-        "link": "/examples/Animation/Transition/ex01/index.html"
-      },
+    
+      
 
       {
         "id": 4,
@@ -92,11 +70,35 @@
       },
       {
         "id": 14,
+        "title": "[javaScript, GSAP]스크롤 비디오 효과",
+        "category": "Javascript",
+        "subCategory": ["Scroll","GSAP"],
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Javascript/Scroll/ex03/index.html"
+      },
+      {
+        "id": 15,
+        "title": "[javaScript, GSAP]스크롤 효과",
+        "category": "Javascript",
+        "subCategory": ["Scroll","GSAP"],
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Javascript/Scroll/ex04/index.html"
+      },
+      {
+        "id": 16,
         "title": "[Clone]자동차 사이트 클론코딩",
         "category": "Clone",
         "subCategory": "Html",
         "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
         "link": "/examples/Clone/Html/ex01/index.html"
+      },
+      {
+        "id": 17,
+        "title": "[javaScript]카드 메뉴 효과",
+        "category": "Javascript",
+        "subCategory": "Mouse",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex03.jpg",
+        "link": "/examples/Javascript/Mouse/ex04/index.html"
       },
       {
         "id": 99,
