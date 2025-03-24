@@ -506,8 +506,13 @@ function initCalendar(year, month, dday) {
 
     for (let day = 1; day <= totalDays; day++) {
         const cell = document.createElement("td");
+        const span = document.createElement("span");
         cell.innerText = day;
-        if (day === dday) cell.classList.add("highlight-day");
+        if (day === dday){
+            cell.classList.add("highlight-day");
+            span.classList.add("dot");
+        } 
+        cell.appendChild(span);
         row.appendChild(cell);
 
         if ((firstWeekday + day) % 7 === 0 || day === totalDays) {
