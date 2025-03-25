@@ -7,6 +7,8 @@
 // let penLink = document.getElementById("penlink");
 // let links = document.getElementsByTagName("a");
 
+// const { img } = require("framer-motion/client");
+
 
 
 // // Load iFrames on demand & remove after modal is closed to reduce weight & smooth out transitions
@@ -394,12 +396,13 @@
 window.onload = () => {
     initCustomCursor();
     // initEscapeKeyClose();
-    initFrameEvents()
+    // initFrameEvents()
     initScrollAnimations();
     // openFrame();
     initPreloader();
     initCalendar(2025, 4, 12);
-    initKakaoMap();
+    // initKakaoMap();
+    gallery()
 }
 
 function initCustomCursor() {
@@ -434,35 +437,35 @@ function initFrameEvents() {
     const iframe = document.getElementById("pen");
     const openTrigger = document.querySelector('.section05 .inner');
     const close = document.getElementById("close");
-  
+
     // 1. 클릭 시 frame 열기
     if (openTrigger) {
-      openTrigger.addEventListener('click', function () {
-        body.classList.add("active");
-      });
+        openTrigger.addEventListener('click', function () {
+            body.classList.add("active");
+        });
     }
-  
+
     // 2. ESC 키로 닫기
     document.addEventListener("keydown", function (evt) {
-      const isEscape = evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27;
-      if (isEscape) {
-        body.classList.remove("active");
-  
-        if (iframe) {
-          setTimeout(() => {
-            iframe.setAttribute("src", "");
-          }, 2000);
+        const isEscape = evt.key === "Escape" || evt.key === "Esc" || evt.keyCode === 27;
+        if (isEscape) {
+            body.classList.remove("active");
+
+            if (iframe) {
+                setTimeout(() => {
+                    iframe.setAttribute("src", "");
+                }, 2000);
+            }
         }
-      }
     });
     close.addEventListener("click", function (event) {
         body.classList.remove("active");
         setTimeout(() => {
-          iframe.setAttribute("src", "");
+            iframe.setAttribute("src", "");
         }, 2000);
-      });
-  }
-  
+    });
+}
+
 
 // function initEscapeKeyClose() {
 //     const body = document.body;
@@ -551,10 +554,10 @@ function initCalendar(year, month, dday) {
         const cell = document.createElement("td");
         const span = document.createElement("span");
         cell.innerText = day;
-        if (day === dday){
+        if (day === dday) {
             cell.classList.add("highlight-day");
             span.classList.add("dot");
-        } 
+        }
         cell.appendChild(span);
         row.appendChild(cell);
 
@@ -606,5 +609,41 @@ function initMapLockToggle() {
         map.setDraggable(!mapLocked);
         map.setZoomable(!mapLocked);
         text.textContent = mapLocked ? '🔒 지도가 잠겨있어요.' : '🔓 지도 이동 가능해요';
+    });
+}
+
+function gallery() {
+    const lightbox = document.getElementById("lightbox");
+    const galleryImages = document.querySelectorAll(".gallery-list li img");
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
+    const closeBtn = document.querySelector(".close-lightbox");
+    const body = document.body;
+    let swiper;
+
+    galleryImages.forEach((img) => {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide";
+        slide.innerHTML = `<img src="${img.src}" alt="" />`;
+        swiperWrapper.appendChild(slide);
+    });
+    // 이미지 클릭 → lightbox 열기
+    galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            lightbox.classList.add("active");
+            body.style.overflow = 'hidden';
+            swiper.slideToLoop(index, 0); // 클릭한 인덱스로 이동
+        });
+    });
+    closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        body.style.overflow = 'auto';
+    });
+
+    swiper = new Swiper(".lightbox-swiper", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 }
