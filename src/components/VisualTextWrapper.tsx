@@ -69,7 +69,7 @@ export default function VisualTextWrapper() {
         Shaping The Future Of
       </p>
       <p ref={mainTextRef2} className="font-bold text-[8rem] text-[#333333] relative inline-block opacity-0 max-lg:text-[6rem] max-sm:text-[4rem]">
-        Commerce
+        Develop
         {/* 점 (⚫) */}
         <span
           ref={dotRef}
