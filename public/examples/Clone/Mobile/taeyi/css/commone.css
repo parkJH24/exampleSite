@@ -317,7 +317,7 @@ body #wrap h1 {
   position: relative;
   width: 100%;
   line-height: 0.9;
-  padding: 24px 0;
+  padding: 48px 0;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(1, 0.885, 0.32, 1);
   transform: scaleX(0);
@@ -1075,7 +1075,8 @@ td {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #6DAECA;
+  /* background-color: #6DAECA; */
+  background: url('../images/layer-heart.png') no-repeat center center / 40px;
   color: white;
   font-weight: bold;
   font-size: 14px;
@@ -1245,35 +1246,19 @@ body #wrap .panel.section04 .section04-info>p {
 
 .link-btn {
   position: relative;
-  padding: 24px 12px;
+  padding: 36px 12px;
   border: solid 1px #ddd;
   border-radius: 5px;
-  color: #fe4e01;
+  color: #000;
   text-align: center;
   display: inline-block;
-  background: #fff0f0;
-  border: 2px solid #b18597;
-  border-radius: 0.75em;
- 
+  background: transparent url('../images/button-basic-stroke.svg') no-repeat center center;
+  border: none;
   z-index: 1;
+  width: 140px;
+
 }
-.link-btn::before{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #f9c4d2;
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
-  -webkit-transform: translate3d(0, 0.75em, -1em);
-          transform: translate3d(0, 0.75em, -1em);
- 
-  z-index: -1;
-}
+
 
 body #wrap .panel.section04 .section04-info .text {
   display: flex;

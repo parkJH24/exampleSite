@@ -608,7 +608,7 @@ function initMapLockToggle() {
         mapLocked = !mapLocked;
         map.setDraggable(!mapLocked);
         map.setZoomable(!mapLocked);
-        text.textContent = mapLocked ? '🔒 지도가 잠겨있어요.' : '🔓 지도 이동 가능해요';
+        text.textContent = mapLocked ? '지도가 잠겨있어요.' : '지도 이동 가능해요';
     });
 }
 
