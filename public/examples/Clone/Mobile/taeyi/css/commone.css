@@ -346,7 +346,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 1200px) - 300px));
+  transform: translateY(calc((var(--progress) * 1200px) - 270px));
 }
 
 body #wrap h1 span.word:before {
