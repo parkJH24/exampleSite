@@ -631,7 +631,11 @@ function gallery() {
         img.addEventListener("click", () => {
             lightbox.classList.add("active");
             body.style.overflow = 'hidden';
-            swiper.slideToLoop(index, 0); // 클릭한 인덱스로 이동
+            // swiper.slideToLoop(index, 0); // 클릭한 인덱스로 이동
+            setTimeout(() => {
+                swiper.update(); // 또는 swiper.updateSize();
+                swiper.slideToLoop(index, 0);
+            }, 50);
         });
     });
     closeBtn.addEventListener("click", () => {
@@ -641,6 +645,8 @@ function gallery() {
 
     swiper = new Swiper(".lightbox-swiper", {
         loop: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
