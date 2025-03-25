@@ -346,7 +346,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 1200px) - 350px));
+  transform: translateY(calc((var(--progress) * 1200px) - 300px));
 }
 
 body #wrap h1 span.word:before {
@@ -662,7 +662,7 @@ body #wrap .panel:before {
 
 body #wrap .panel h2 {
   font-family: "GangwonEdu_OTFBoldA";
-  font-size: 64px;
+  font-size: calc(64px - 0.2vw);
   position: absolute;
   z-index: 3;
   color: transparent;
@@ -892,19 +892,26 @@ body #wrap .panel .thumb {
   width: 100%;
   height: 480px;
 }
-
-/* section02 */
-body #wrap .panel.section02 .thumb {
-  width: 70%;
-  height: 300px;
+/* section01 */
+body #wrap .panel.section01 h2{
+  transform: translateY(calc(100px - (var(--progress) * -200px)));
 }
 
+/* section02 */
+/* body #wrap .panel.section02 .thumb {
+  width: 70%;
+  height: 300px;
+} */
+body #wrap .panel.section02 h2{
+  transform: translateY(calc(100px - (var(--progress) * -250px)));
+}
 body #wrap .panel.section02 .thumb img {
   left: 50%;
+  top: -60%;
 }
 
 body #wrap .panel.section02 .text {
-  padding: 120px 0 80px;
+  padding: 60px 0 80px;
 }
 
 
@@ -992,11 +999,14 @@ body #wrap .panel .thumb:after {
 body #wrap .panel .thumb img {
   /* mix-blend-mode: exclusion; */
   position: absolute;
-  top: -75%;
-  left: 70%;
+  /* top: -75%; */
+  /* left: 70%; */
+  top: -25%;
+  left: 50%;
   transform: translateY(calc(var(--progress) * 25%)) translateX(-50%);
   width: auto;
-  height: 200%;
+  /* height: 200%; */
+  height: 150%;
   z-index: -1;
   /* filter: saturate(0) blur(calc(50px - (var(--progress) * 125px))) brightness(0.5) contrast(4); */
   /* mix-blend-mode: luminosity; */
@@ -1280,7 +1290,7 @@ body #wrap .panel.section04 .section04-info .text {
   margin: 0 auto;
   padding: 50px 0px;
   position: relative;
-  background: #000;
+  background: #6DAECA
 }
 
 .footer-img {
@@ -1289,7 +1299,8 @@ body #wrap .panel.section04 .section04-info .text {
   position: absolute;
   top: -50px;
   left: 0;
-  background: url(../images/footer-layer.svg) no-repeat center center / 200%;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1910 153.3'><path d='M0,80.42S20,27.86,80,31.9s78,54.58,78,54.58S174,34.93,222,37,297,88.5,297,88.5s17-55.59,69-53.57,59,43.46,59,43.46,13-62.67,55-58.62,48,41.44,48,41.44,5-35.38,42-47.5S627,60.2,627,60.2s22-42.45,53-39.42,36,31.33,36,31.33,2-37.4,59-38.41,58,39.42,58,39.42,21-39.42,61-40.43,67,37.4,70,46.49c0,0,10-43.46,55-51.55s67,50.54,67,50.54,8-50.54,65-57.61,92,54.58,92,54.58,4-41.44,51-47.5,62,46.49,62,46.49,18-44.47,64-48.52,67,47.5,67,47.5,11-40.43,58-42.45,73,29.31,81,42.45c0,0,9-39.42,63-34.37s65,35.38,65,35.38,10-38.41,56-33.35,62,47.5,62,47.5,14-36.39,38-40.43V153.3H0Z' fill='%236DAECA'/></svg>") no-repeat center center / cover;
+
   /* animation : footer-ani 1000ms infinite alternate; */
 
 }
@@ -1303,7 +1314,8 @@ body #wrap .panel.section04 .section04-info .text {
 }
 
 .footer-content p {
-  color: #fe4e01;
+  color: #000;
+  font-family: "GangwonEdu_OTFBoldA";
   text-align: center;
 
 }
