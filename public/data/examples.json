@@ -73,7 +73,7 @@
         "title": "[javaScript, GSAP]스크롤 비디오 효과",
         "category": "Javascript",
         "subCategory": ["Scroll","GSAP"],
-        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "thumbnail": "/thumbnails/Javascript/Scroll/ex03.jpg",
         "link": "/examples/Javascript/Scroll/ex03/index.html"
       },
       {
@@ -81,7 +81,7 @@
         "title": "[javaScript, GSAP]스크롤 효과",
         "category": "Javascript",
         "subCategory": ["Scroll","GSAP"],
-        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "thumbnail": "/thumbnails/Javascript/Scroll/ex04.jpg",
         "link": "/examples/Javascript/Scroll/ex04/index.html"
       },
       {
@@ -97,13 +97,13 @@
         "title": "[javaScript]카드 메뉴 효과",
         "category": "Javascript",
         "subCategory": "Mouse",
-        "thumbnail": "/thumbnails/Javascript/Mouse/ex03.jpg",
+        "thumbnail": "/thumbnails/Javascript/Mouse/ex04.jpg",
         "link": "/examples/Javascript/Mouse/ex04/index.html"
       },
       {
         "id": 99,
         "title": "[Mobile]초대장 디자인",
-        "category": "Clone",
+        "category": "test",
         "subCategory": "Mobile",
         "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
         "link": "/examples/Clone/Mobile/taeyi/index.html"
