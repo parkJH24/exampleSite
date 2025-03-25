@@ -39,7 +39,7 @@ body.loaded #loader .wrap span {
 
 body.loaded #wrap {
   transform: translateX(0%);
-  background: #eeece5;
+  /* background: #eeece5; */
 }
 
 body.loaded #wrap p.subhead {
@@ -70,17 +70,17 @@ body.loaded #wrap h1 span.word:before {
 }
 
 body.loaded::-webkit-scrollbar {
-  background: #a58725;
+  background: #FDE061;
   width: 5px;
 }
 
 body::-webkit-scrollbar {
-  background: #fe4e01;
+  background: #6DAECA;
   width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #fe4e01;
+  background: #6DAECA
 }
 
 body.active {
@@ -212,8 +212,8 @@ body #cursor {
   border-radius: 100%;
   top: 0%;
   left: 0%;
-  border: 2px solid #a58725;
-  box-shadow: inset 0 0 0 0 #a58725;
+  border: 2px solid #FDE061;
+  box-shadow: inset 0 0 0 0 #FDE061;
   pointer-events: none;
   display: flex;
   justify-content: center;
@@ -267,7 +267,7 @@ body #cursor.active:after {
 }
 
 body #cursor.active strong {
-  box-shadow: inset 0 0 0 20px #a58725;
+  box-shadow: inset 0 0 0 20px #FDE061;
 }
 
 body #cursor.active strong:before {
@@ -326,13 +326,13 @@ body #wrap h1:after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: #a58725;
+  background: #FDE061;
   z-index: 2;
 }
 
 body #wrap h1:after {
   transform-origin: left;
-  background: #fe4e01;
+  background: #6DAECA;
   z-index: 3;
   transform: scaleX(calc(1 - (var(--progress) * 2)));
 }
@@ -340,7 +340,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 1200px) - 200px));
+  transform: translateY(calc((var(--progress) * 1200px) - 350px));
 }
 
 body #wrap h1 span.word:before {
@@ -349,11 +349,14 @@ body #wrap h1 span.word:before {
   top: 50%;
   transform: translate(-50%, 150%);
   content: attr(data-word);
-  color: #08350e;
+  /* color: #08350e; */
+  color : #6DAECA ;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px #08350e;
+  /* -webkit-text-stroke: 2px #08350e; */
+  -webkit-text-stroke : 2px #6DAECA;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom, #08350e 50%, #eeece5 50%);
+  /* background-image: linear-gradient(to bottom, #08350e 50%, #eeece5 50%); */
+  background-image: linear-gradient(to bottom, #6DAECA 50%, #eeece5 50%);
   background-size: 100% 200%;
   background-position: 50% 100%;
   transition: 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-position 0.5s cubic-bezier(1, 0.885, 0.32, 1);
@@ -386,7 +389,7 @@ body #wrap p.subhead.final:after {
   width: 25vw;
   max-width: 500px;
   height: 1px;
-  border-bottom: 2px #a58725 dashed;
+  border-bottom: 2px #FDE061 dashed;
   top: calc(50% - 1.5px);
   opacity: 0.25;
   left: 100px;
@@ -645,7 +648,7 @@ body #wrap .panel:before {
   justify-content: flex-start;
   align-items: center;
   color: #eeece5;
-  -webkit-text-stroke: 2px #a58725;
+  -webkit-text-stroke: 2px #FDE061;
   line-height: 1;
   opacity: 0;
   transition: 1.75s ease-in-out;
@@ -668,7 +671,9 @@ body #wrap .panel h2 span.word {
   display: inline-block;
   overflow: hidden;
   color: transparent;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%236DAECA; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+
   padding: 30px 0;
   margin: -24px 0;
   -webkit-animation: waving 3s linear infinite;
@@ -686,23 +691,43 @@ body #wrap .panel h2 span.word {
 
 #wrap .panel .text p {
   font-size: 20px;
+  letter-spacing: -0.5px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 #wrap .panel .text .title {
-  color: #fe4e01;
+  /* color: #fe4e01; */
+  color : #6DAECA;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight:bold;
+}
+#wrap .panel .text .title:before{
+  content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0.1em;
+      width: 100%;
+      height: 0.6em;
+      background-image: url('https://raw.githubusercontent.com/aaroniker/brush-highlight/main/assets/brush.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
 }
 
-#wrap .panel .text p span {
+#wrap .panel .text span {
   font-size: 16px;
   position: relative;
 }
 
-#wrap .panel .text p span span:before {
+#wrap .panel .text  span span:before {
   content: "";
-  background: #fe4e01;
+  /* background: #fe4e01; */
+  background : #A1DAEA;
   opacity: 0.3;
   width: 100%;
   height: 100%;
@@ -713,27 +738,33 @@ body #wrap .panel h2 span.word {
 }
 
 body #wrap .panel h2 span.word:nth-of-type(1) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(2) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.5s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.5s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.5s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(3) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.75s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.75s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.75s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(4) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(5) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.25s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(6) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.5s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.5s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-1.5s; stroke:%23FDE061; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
 }
 
 @-webkit-keyframes waving {
@@ -769,13 +800,15 @@ body #wrap .panel h2 span.word:before {
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to bottom, transparent 25%, #fe4e01 25%, #fe4e01 75%, transparent 75%);
+  /* background-image: linear-gradient(to bottom, transparent 25%, #fe4e01 25%, #fe4e01 75%, transparent 75%); */
+  background-image: linear-gradient(to bottom, transparent 25%, #6DAECA  25%, #6DAECA 75%, transparent 75%);
   background-size: 100% 250%;
   background-repeat: no-repeat;
   background-position: 50% calc((var(--progress) * 200px) - 150px);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: 1.25s;
-  -webkit-text-stroke: 2px #fe4e01;
+  /* -webkit-text-stroke: 2px #fe4e01; */
+  -webkit-text-stroke: 2px #6DAECA ;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(3n):before {
@@ -875,7 +908,7 @@ body #wrap .panel .thumb p {
   width: 100%;
   top: -30px;
   margin: 0;
-  color: #a58725;
+  color: #6DAECA;
   font-size: 12px;
   left: 0;
   text-align: center;
@@ -903,8 +936,8 @@ body #wrap .panel .thumb .inner:after {
   height: 100%;
   top: 0;
   left: 0;
-  background: #a58725;
-  mix-blend-mode: lighten;
+  /* background: #a58725; */
+  /* mix-blend-mode: lighten; */
   opacity: 0.5;
   z-index: 2;
 }
@@ -918,7 +951,7 @@ body #wrap .panel .thumb .inner:after {
 
 body #wrap .panel .thumb:hover:before {
   transform: translate(-5%, -5%);
-  box-shadow: 0 0 0 2px #a58725, 0 0 0 6px #eeece5, 0 0 0 8px #fe4e01;
+  box-shadow: 0 0 0 2px #FDE061, 0 0 0 6px #eeece5, 0 0 0 8px #6DAECA;
   transition-delay: 0s, 0.2s;
 }
 
@@ -929,7 +962,7 @@ body #wrap .panel .thumb:before {
   height: 100%;
   left: 5%;
   top: 5%;
-  box-shadow: 0 0 0 2px #a58725, 0 0 0 0 #eeece5, 0 0 0 0 #fe4e01;
+  box-shadow: 0 0 0 2px #FDE061, 0 0 0 0 #eeece5, 0 0 0 0 #6DAECA;
   transition: transform 0.2s cubic-bezier(1, 0.885, 0.32, 1), box-shadow 0.2s cubic-bezier(1, 0.885, 0.32, 1);
   transition-delay: 0.2s, 0s;
   background: radial-gradient(circle at center, #a58725 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 0px 0px/20px 20px, radial-gradient(circle at center, #a58725 1px, rgba(255, 255, 255, 0.005) 1px, rgba(255, 255, 255, 0.005) 20px) 10px 10px/20px 20px;
@@ -945,13 +978,13 @@ body #wrap .panel .thumb:after {
   top: 100%;
   border-style: dashed;
   border-width: 2px 2px 2px 2px;
-  border-color: transparent #a58725 #a58725 transparent;
+  border-color: transparent #FDE061 #FDE061 transparent;
   border-radius: 0 0 10px 0;
   opacity: 0.25;
 }
 
 body #wrap .panel .thumb img {
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
   position: absolute;
   top: -75%;
   left: 70%;
@@ -960,7 +993,7 @@ body #wrap .panel .thumb img {
   height: 200%;
   z-index: -1;
   /* filter: saturate(0) blur(calc(50px - (var(--progress) * 125px))) brightness(0.5) contrast(4); */
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
 }
 
 body #wrap .panel .thumb img.invert {
@@ -1027,7 +1060,7 @@ td {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #fe4e01;
+  background-color: #6DAECA;
   color: white;
   font-weight: bold;
   font-size: 14px;
@@ -1179,7 +1212,7 @@ body #wrap .panel.section04 h2 {
 }
 
 body #wrap .panel.section04 .section04-info {
-  padding: 12px 0px;
+  padding: 36px 0px 12px;
   display: flex;
   gap: 12px;
   z-index: 11;
