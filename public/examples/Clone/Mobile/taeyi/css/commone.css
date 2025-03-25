@@ -317,7 +317,7 @@ body #wrap h1 {
   position: relative;
   width: 100%;
   line-height: 0.9;
-  padding: 48px 0 24px;
+  padding: 60px 0 12px;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(1, 0.885, 0.32, 1);
   transform: scaleX(0);
