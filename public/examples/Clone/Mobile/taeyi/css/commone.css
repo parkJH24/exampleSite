@@ -1316,7 +1316,7 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
   align-items: center;
 }
 .lightbox.active {
-  display: flex;
+  display: block;
 }
 
 .lightbox button {
