@@ -401,7 +401,7 @@ window.onload = () => {
     // openFrame();
     initPreloader();
     initCalendar(2025, 4, 12);
-    // initKakaoMap();
+    initKakaoMap();
     gallery()
 }
 
