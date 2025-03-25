@@ -626,24 +626,6 @@ function gallery() {
         slide.innerHTML = `<img src="${img.src}" alt="" />`;
         swiperWrapper.appendChild(slide);
     });
-    // 이미지 클릭 → lightbox 열기
-    galleryImages.forEach((img, index) => {
-        img.addEventListener("click", () => {
-            lightbox.classList.add("active");
-            body.style.overflow = 'hidden';
-            // swiper.slideToLoop(index, 0); // 클릭한 인덱스로 이동
-            swiper.update(); // 또는 swiper.updateSize();
-                swiper.slideToLoop(index, 0);
-            setTimeout(() => {
-                
-            }, 50);
-        });
-    });
-    closeBtn.addEventListener("click", () => {
-        lightbox.classList.remove("active");
-        body.style.overflow = 'auto';
-    });
-
     swiper = new Swiper(".lightbox-swiper", {
         loop: true,
         observer: true,
@@ -653,4 +635,24 @@ function gallery() {
             prevEl: ".swiper-button-prev",
         },
     });
+    // 이미지 클릭 → lightbox 열기
+    galleryImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            lightbox.classList.add("active");
+            body.style.overflow = 'hidden';
+            // swiper.slideToLoop(index, 0); // 클릭한 인덱스로 이동
+            // swiper.update(); // 또는 swiper.updateSize();
+            setTimeout(() => {
+                swiper.update(); // 슬라이드 갱신
+                swiper.slideToLoop(index, 0); // 정확한 인덱스로 이동
+              }, 50);
+
+        });
+    });
+    closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        body.style.overflow = 'auto';
+    });
+
+    
 }
