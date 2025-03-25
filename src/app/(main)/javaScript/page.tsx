@@ -69,7 +69,7 @@ const JavaScriptPages = () => {
             </div>
           </section>
 
-          <section ref={sectionRefs.GSAP} className="bg-[#000000] relative z-11pb-[20rem]">
+          <section ref={sectionRefs.GSAP} className="bg-[#000000] relative z-11 pb-[20rem]">
             <LineAnimation strokeColor="#000000" fillColor="#000000" />
             <div className="max-w-[160rem] mx-auto px-6 lg:px-0">
             <h2 className="text-center text-[3rem] md:text-[4rem] lg:text-[4.8rem] font-normal mb-10">
