@@ -1321,7 +1321,6 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
 
 .lightbox button {
   position: absolute;
-  background: none;
   border: none;
   color: white;
   font-size: 2rem;
@@ -1339,17 +1338,30 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 80%;
+  max-width: 70%;
   width: auto;
   height: auto;
 }
 .close-lightbox{
-  position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  color: #fff;
+  width: 40px;
+  height: 30px;
+  background: url("../images/closebtn.png") no-repeat center center / 40px;
+}
+.swiper-button-next{
+  background: url("../images/next-arrows.png") no-repeat right center / 40px;
+}
+.swiper-button-next::after{
+  display: none;
+}
+.swiper-button-prev{
+  background: url("../images/prev-arrows.png") no-repeat left center / 40px;
+}
+.swiper-button-prev::after{
+  display: none;
 }
 /* footer */
 .footer {

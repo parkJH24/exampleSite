@@ -645,7 +645,7 @@ function gallery() {
             setTimeout(() => {
                 swiper.update(); // 슬라이드 갱신
                 swiper.slideToLoop(index, 0); // 정확한 인덱스로 이동
-              }, 50);
+              }, 20);
 
         });
     });
