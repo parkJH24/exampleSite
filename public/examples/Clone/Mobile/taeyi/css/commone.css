@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'GangwonEdu_OTFBoldA';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
@@ -317,7 +318,7 @@ body #wrap h1 {
   position: relative;
   width: 100%;
   line-height: 0.9;
-  padding: 60px 0 12px;
+  padding: 80px 0 0px;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(1, 0.885, 0.32, 1);
   transform: scaleX(0);
@@ -356,10 +357,10 @@ body #wrap h1 span.word:before {
   transform: translate(-50%, 150%);
   content: attr(data-word);
   /* color: #08350e; */
-  color : #6DAECA ;
+  color: #6DAECA;
   -webkit-text-fill-color: transparent;
   /* -webkit-text-stroke: 2px #08350e; */
-  -webkit-text-stroke : 2px #6DAECA;
+  -webkit-text-stroke: 2px #6DAECA;
   -webkit-background-clip: text;
   /* background-image: linear-gradient(to bottom, #08350e 50%, #eeece5 50%); */
   background-image: linear-gradient(to bottom, #6DAECA 50%, #eeece5 50%);
@@ -705,24 +706,25 @@ body #wrap .panel h2 span.word {
 
 #wrap .panel .text .title {
   /* color: #fe4e01; */
-  color : #6DAECA;
+  color: #6DAECA;
   position: relative;
   display: inline-block;
   color: #fff;
-  font-weight:bold;
+  font-weight: bold;
 }
-#wrap .panel .text .title:before{
+
+#wrap .panel .text .title:before {
   content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0.1em;
-      width: 100%;
-      height: 0.6em;
-      background-image: url('https://raw.githubusercontent.com/aaroniker/brush-highlight/main/assets/brush.svg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: -1;
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.6em;
+  background-image: url('https://raw.githubusercontent.com/aaroniker/brush-highlight/main/assets/brush.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
 }
 
 #wrap .panel .text span {
@@ -730,10 +732,10 @@ body #wrap .panel h2 span.word {
   position: relative;
 }
 
-#wrap .panel .text  span span:before {
+#wrap .panel .text span span:before {
   content: "";
   /* background: #fe4e01; */
-  background : #A1DAEA;
+  background: #A1DAEA;
   opacity: 0.3;
   width: 100%;
   height: 100%;
@@ -807,14 +809,14 @@ body #wrap .panel h2 span.word:before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* background-image: linear-gradient(to bottom, transparent 25%, #fe4e01 25%, #fe4e01 75%, transparent 75%); */
-  background-image: linear-gradient(to bottom, transparent 25%, #6DAECA  25%, #6DAECA 75%, transparent 75%);
+  background-image: linear-gradient(to bottom, transparent 25%, #6DAECA 25%, #6DAECA 75%, transparent 75%);
   background-size: 100% 250%;
   background-repeat: no-repeat;
   background-position: 50% calc((var(--progress) * 200px) - 150px);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: 1.25s;
   /* -webkit-text-stroke: 2px #fe4e01; */
-  -webkit-text-stroke: 2px #6DAECA ;
+  -webkit-text-stroke: 2px #6DAECA;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(3n):before {
@@ -892,19 +894,23 @@ body #wrap .panel .thumb {
   width: 100%;
   height: 480px;
 }
+
 /* section01 */
-body #wrap .panel.section01 h2{
+body #wrap .panel.section01 h2 {
   transform: translateY(calc(100px - (var(--progress) * -200px)));
 }
-
+body #wrap .panel.section01 .text{
+  font-family: 'GangwonEdu_OTFBoldA';
+}
 /* section02 */
 /* body #wrap .panel.section02 .thumb {
   width: 70%;
   height: 300px;
 } */
-body #wrap .panel.section02 h2{
+body #wrap .panel.section02 h2 {
   transform: translateY(calc(100px - (var(--progress) * -250px)));
 }
+
 body #wrap .panel.section02 .thumb img {
   left: 50%;
   top: -60%;
@@ -912,6 +918,7 @@ body #wrap .panel.section02 .thumb img {
 
 body #wrap .panel.section02 .text {
   padding: 60px 0 80px;
+  font-family: 'GangwonEdu_OTFBoldA';
 }
 
 
@@ -1050,6 +1057,7 @@ td {
   padding: 10px;
   width: 50px;
   height: 50px;
+  font-family: 'GangwonEdu_OTFBoldA';
 }
 
 th {
@@ -1064,10 +1072,12 @@ td {
   vertical-align: middle;
   text-align: center;
 }
-.highlight-day{
+
+.highlight-day {
   padding: 0;
   color: #fff;
 }
+
 .highlight-day .dot {
   display: inline-flex;
   justify-content: center;
@@ -1084,8 +1094,8 @@ td {
   left: 50%;
   position: absolute;
   z-index: -1;
-  transform: translate(-50%,-50%);
-  
+  transform: translate(-50%, -50%);
+
 }
 
 
@@ -1154,7 +1164,9 @@ body #wrap .panel.section04 {
   pointer-events: auto;
   /* opacity: 1!important; */
 }
-
+body #wrap .panel.section04 h2{
+  font-size: calc(58px - 1vw);
+}
 body #wrap .panel.section04 .section04-btn-wrapper {
   margin-bottom: 30px;
   width: 100%;
@@ -1162,6 +1174,7 @@ body #wrap .panel.section04 .section04-btn-wrapper {
   justify-content: end;
   align-items: center;
   gap: 12px;
+  font-family: 'GangwonEdu_OTFBoldA';
 
 }
 
@@ -1209,12 +1222,15 @@ body #wrap .panel.section04 .section04-btn-wrapper label:before {
   background: #fff;
   border: none;
 }
-body #wrap .panel.section04 .section04-btn-wrapper input:checked + label{
+
+body #wrap .panel.section04 .section04-btn-wrapper input:checked+label {
   background: #4caf50;
 }
-body #wrap .panel.section04 .section04-btn-wrapper input:checked + label:before {
+
+body #wrap .panel.section04 .section04-btn-wrapper input:checked+label:before {
   left: 30px;
 }
+
 body #wrap .panel.section04 .thumb {
   height: 350px;
 }
@@ -1234,15 +1250,20 @@ body #wrap .panel.section04 .section04-info {
   z-index: 11;
   position: relative;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body #wrap .panel.section04 .section04-info .text{
+  font-family: 'GangwonEdu_OTFBoldA';
+  
+}
+body #wrap .panel.section04 .section04-info .text P{
+  display: flex;
+ justify-content: center;
+  text-align: left;
 }
 
-body #wrap .panel.section04 .section04-info>p {
-  /* color: #fe4e01; */
-  color: #999;
-  font-size: 14px;
-  text-align: center;
-  padding: 12px 0px;
-}
+
 
 .link-btn {
   position: relative;
@@ -1256,6 +1277,7 @@ body #wrap .panel.section04 .section04-info>p {
   border: none;
   z-index: 1;
   width: 140px;
+  font-family: 'GangwonEdu_OTFBoldA';
 
 }
 
@@ -1266,40 +1288,51 @@ body #wrap .panel.section04 .section04-info .text {
   gap: 24px;
   text-align: left;
 }
+
 /* section05 */
-body #wrap .panel.section05 .gallery{
+body #wrap .panel.section05 .gallery {
   padding: 32px 0px;
   width: 100%;
   position: relative;
   z-index: 9;
 }
-body #wrap .panel.section05 .gallery .gallery-list{
+
+body #wrap .panel.section05 h2 {
+  transform: translateY(calc(100px - (var(--progress)* -300px)));
+}
+body #wrap .panel.section05 .thumb img{
+  top: -40%;
+}
+body #wrap .panel.section05 .gallery .gallery-list {
 
   column-count: 3;
   column-gap: 12px;
 }
-body #wrap .panel.section05 .gallery .gallery-list li{
+
+body #wrap .panel.section05 .gallery .gallery-list li {
   margin-bottom: 12px;
   break-inside: avoid;
 }
-body #wrap .panel.section05 .gallery .gallery-list li img{
+
+body #wrap .panel.section05 .gallery .gallery-list li img {
   width: 100%;
   display: block;
   cursor: pointer;
 }
 
-.lightbox{
+.lightbox {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
 }
+
 .lightbox.active {
   display: block;
 }
@@ -1311,13 +1344,15 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
   font-size: 2rem;
   cursor: pointer;
 }
-.lightbox .swiper .swiper-wrapper .swiper-slide{
+
+.lightbox .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
   position: relative;
   height: 100vh;
 }
-.lightbox .swiper .swiper-wrapper .swiper-slide img{
+
+.lightbox .swiper .swiper-wrapper .swiper-slide img {
   /* position: absolute; */
   position: fixed;
   left: 50%;
@@ -1327,8 +1362,9 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
   width: auto;
   height: auto;
 }
-.close-lightbox{
-  bottom: 20%;
+
+.close-lightbox {
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -1336,18 +1372,23 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
   height: 30px;
   background: url("../images/closebtn.png") no-repeat center center / 40px;
 }
-.swiper-button-next{
+
+.swiper-button-next {
   background: url("../images/next-arrows.png") no-repeat right center / 40px;
 }
-.swiper-button-next::after{
+
+.swiper-button-next::after {
   display: none;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
   background: url("../images/prev-arrows.png") no-repeat left center / 40px;
 }
-.swiper-button-prev::after{
+
+.swiper-button-prev::after {
   display: none;
 }
+
 /* footer */
 .footer {
   width: 100%;
@@ -1398,5 +1439,3 @@ body #wrap .panel.section05 .gallery .gallery-list li img{
     transform: translateY(16px);
   }
 }
-
-
