@@ -15,7 +15,7 @@
 body {
   scroll-behavior: smooth;
   background: #fff;
-  cursor: none;
+  /* cursor: none; */
   font-family: "Lexend Mega", sans-serif;
   pointer-events: none;
   transition-delay: 2s;
@@ -211,7 +211,7 @@ body:hover #cursor {
   opacity: 1;
 }
 
-body #cursor {
+/* body #cursor {
   position: fixed;
   z-index: 97;
   width: 30px;
@@ -231,7 +231,7 @@ body #cursor {
   will-change: transform;
   transition: opacity 0.3s ease-in-out, border-width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   opacity: 0;
-}
+} */
 
 body #cursor:before,
 body #cursor:after {
@@ -676,16 +676,17 @@ body #wrap .panel h2 {
 body #wrap .panel h2 span.word {
   position: relative;
   display: inline-block;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: transparent;
   /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23a58725; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x; */
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%236DAECA; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 65px/80px 80px repeat-x;
-
   padding: 30px 0;
-  margin: -24px 0;
+  margin: -12px 0;
   -webkit-animation: waving 3s linear infinite;
   animation: waving 3s linear infinite;
   white-space: nowrap;
+  -webkit-text-stroke: 8px white;
+  z-index: 1;
 }
 
 #wrap .panel .text {
@@ -799,7 +800,7 @@ body #wrap .panel h2 span.word:nth-of-type(6) {
   }
 }
 
-body #wrap .panel h2 span.word:before {
+body #wrap .panel h2 span.word:after {
   content: attr(data-word);
   position: absolute;
   top: 50%;
@@ -816,7 +817,9 @@ body #wrap .panel h2 span.word:before {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: 1.25s;
   /* -webkit-text-stroke: 2px #fe4e01; */
-  -webkit-text-stroke: 2px #6DAECA;
+  /* -webkit-text-stroke: 2px #6DAECA; */
+  -webkit-text-stroke: 1px #666;
+  text-shadow: 2px 2px 0px #6DAECA;
 }
 
 body #wrap .panel h2 span.word:nth-of-type(3n):before {
@@ -899,9 +902,11 @@ body #wrap .panel .thumb {
 body #wrap .panel.section01 h2 {
   transform: translateY(calc(100px - (var(--progress) * -200px)));
 }
-body #wrap .panel.section01 .text{
+
+body #wrap .panel.section01 .text {
   font-family: 'GangwonEdu_OTFBoldA';
 }
+
 /* section02 */
 /* body #wrap .panel.section02 .thumb {
   width: 70%;
@@ -1164,9 +1169,11 @@ body #wrap .panel.section04 {
   pointer-events: auto;
   /* opacity: 1!important; */
 }
-body #wrap .panel.section04 h2{
-  font-size: calc(58px - 1vw);
+
+body #wrap .panel.section04 h2 {
+  font-size: calc(50px - 1vw);
 }
+
 body #wrap .panel.section04 .section04-btn-wrapper {
   margin-bottom: 30px;
   width: 100%;
@@ -1253,13 +1260,15 @@ body #wrap .panel.section04 .section04-info {
   flex-direction: column;
   align-items: center;
 }
-body #wrap .panel.section04 .section04-info .text{
+
+body #wrap .panel.section04 .section04-info .text {
   font-family: 'GangwonEdu_OTFBoldA';
-  
+
 }
-body #wrap .panel.section04 .section04-info .text P{
+
+body #wrap .panel.section04 .section04-info .text P {
   display: flex;
- justify-content: center;
+  justify-content: center;
   text-align: left;
 }
 
@@ -1300,9 +1309,11 @@ body #wrap .panel.section05 .gallery {
 body #wrap .panel.section05 h2 {
   transform: translateY(calc(100px - (var(--progress)* -300px)));
 }
-body #wrap .panel.section05 .thumb img{
+
+body #wrap .panel.section05 .thumb img {
   top: -40%;
 }
+
 body #wrap .panel.section05 .gallery .gallery-list {
 
   column-count: 3;

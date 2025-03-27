@@ -394,7 +394,7 @@
 // })
 
 window.onload = () => {
-    initCustomCursor();
+    // initCustomCursor();
     // initEscapeKeyClose();
     // initFrameEvents()
     initScrollAnimations();
