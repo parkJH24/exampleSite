@@ -1046,13 +1046,30 @@ body #wrap .panel .thumb img.lighter {
   /* background: white; */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .calendar .calendarTitle {
   text-align: center;
   margin-bottom: 24px;
   font-size: 24px;
-  color: #fe4e01;
+  color: #6DAECA;
+  font-family: 'GangwonEdu_OTFBoldA';
+  position: relative;
+  z-index: 1;
+}
+.calendar .calendarTitle:after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: #FDE061;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 1;
 }
 
 th,
