@@ -3,7 +3,7 @@
 import {useState } from "react";
 import HeartIcon from "./icon/Heart";
 
-// 📌 탭 메뉴 데이터
+//탭 메뉴 데이터
 const tabs = [
   { id: "Basic", label: "Basic" },
   { id: "UI", label: "UI" },
@@ -13,10 +13,10 @@ const tabs = [
 ];
 
 export default function AnimationTab({ sectionRefs }: { sectionRefs: Record<string, React.RefObject<HTMLDivElement>> }) {
-  // 📌 Hover 상태 관리
+  //Hover 상태 관리
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
 
-  // 📌 클릭 시 해당 섹션으로 스크롤 이동
+  // 클릭 시 해당 섹션으로 스크롤 이동
   const handleScrollToSection = (id: string) => {
     sectionRefs[id]?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -25,7 +25,7 @@ export default function AnimationTab({ sectionRefs }: { sectionRefs: Record<stri
     <div className="justify-center items-center gap-6 mb-[12rem] mt-[-10rem] lg:flex max-lg:hidden">
       {tabs.map((tab, index) => (
         <div key={tab.id} className="flex items-center gap-[3rem]">
-          {/* 탭 버튼 (Hover 적용) */}
+          {/*탭 버튼 (Hover 적용) */}
           <button
             onClick={() => handleScrollToSection(tab.id)}
             onMouseEnter={() => setHoveredTab(tab.id)}
@@ -42,7 +42,7 @@ export default function AnimationTab({ sectionRefs }: { sectionRefs: Record<stri
             </span>
           </button>
 
-          {/* 🔹 중간 구분 점 (마지막 탭 제외) */}
+          {/*중간 구분 점 (마지막 탭 제외) */}
           {index < tabs.length - 1 && (
             <span className="w-[0.8rem] h-[0.8rem] bg-[#bffeff] border-[0.2rem] border-[#333333] rounded-full"></span>
           )}
