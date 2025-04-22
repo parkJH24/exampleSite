@@ -101,6 +101,14 @@
         "link": "/examples/Javascript/Mouse/ex04/index.html"
       },
       {
+        "id": 18,
+        "title": "우주 여행 사이트",
+        "category": "Clone",
+        "subCategory": "Html",
+        "thumbnail": "/thumbnails/Javascript/Slide/ex01.jpg",
+        "link": "/examples/Clone/Html/ex02/index.html"
+      },
+      {
         "id": 99,
         "title": "[Mobile]초대장 디자인",
         "category": "test",
