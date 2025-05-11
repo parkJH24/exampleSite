@@ -949,7 +949,7 @@ body, html {
 }
 .modelContainer .category .selectStyle:after {
   content: "";
-  background: url(../../images/w-ico-arrow-top.png) no-repeat center center/12px;
+  background: url(../images/w-ico-arrow-top.png) no-repeat center center/12px;
   width: 12px;
   height: 12px;
   display: block;
