@@ -44,13 +44,13 @@ const observeGnbList = () => {
 export let allModels = [];
 export let allAwards = [];
 export async function fetchModels() {
-  const res = await fetch('../data/model.json');
+  const res = await fetch('./data/model.json');
   const data = await res.json();
   allModels = data;
 }
 
 export async function fetchAwards(){
-  const res = await fetch('../data/award.json')
+  const res = await fetch('./data/award.json')
   const data =await res.json();
   allAwards = data;
   console.log(allAwards)
