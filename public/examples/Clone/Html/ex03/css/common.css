@@ -184,7 +184,7 @@ body, html {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(./images/logo.png) no-repeat center center/100%;
+  background: url(../images/logo.png) no-repeat center center/100%;
 }
 .hContainer .inner .gnbWrapper {
   height: 100%;
