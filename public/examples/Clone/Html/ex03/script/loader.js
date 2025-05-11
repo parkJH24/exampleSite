@@ -59,11 +59,11 @@ export async function fetchAwards(){
 
 
 export async function initLoader(){
-  await loadHTML("header", "/components/header.html");
+  await loadHTML("header", "./components/header.html");
   await loadIncludes(document.getElementById("header"));
 
 
-  await loadHTML("footer", "/components/footer.html");
+  await loadHTML("footer", "./components/footer.html");
 
   // 처음부터 있는 data-include도 탐색
   await loadIncludes();
