@@ -95,7 +95,7 @@ function awardSlide() {
 
     function resetBullets(duration) {
         const activeBullet = document.querySelector(".awardContainer .swiper-pagination-bullet-active");
-        const others = document.querySelector(".awardContainer .swiper-pagination-bullet");
+        const others = document.querySelectorAll(".awardContainer .swiper-pagination-bullet");
 
         others.forEach(bullet => {
             bullet.classList.remove('pause');
