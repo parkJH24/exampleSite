@@ -10,19 +10,19 @@
                 display: flex;
                 color: $white-color;
                 padding-top: 80px;
-                background: url(../../images/quitation.gif) no-repeat center top;
+                background: url(../images/quitation.gif) no-repeat center top;
                 justify-content: center;
                 font-size: 16px;
                 &.icon-sales {
-                    background-image: url(../../images/sales.gif);
+                    background-image: url(../images/sales.gif);
                 }
     
                 &.icon-drive {
-                    background-image: url(../../images/drive.gif);
+                    background-image: url(../images/drive.gif);
                 }
     
                 &.icon-catalog {
-                    background-image: url(../../images/catalog.gif);
+                    background-image: url(../images/catalog.gif);
                 }
             }
             
