@@ -1,0 +1,327 @@
+.visualContainer {
+    width: 100%;
+    height: calc(100vh - 70px);
+    min-height: 640px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        //object-fit 멀티미디어 요소(이미지, 비디오)
+        //백그라운드에 있는 cover, containe으로 멀티미디어 요소들의 사이즈를 조절하는 css
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+
+                &.item01 .content-bg.pc {
+                    background-image: url(../images/main-visual01.jpg);
+                }
+
+                &.item02 .content-bg.pc {
+                    background-image: url(../images/main-visual02.jpg);
+                }
+
+                &.item03 .content-bg.pc {
+                    background-image: url(../images/main-visual03.jpg);
+
+                }
+
+                &.item04 .content-bg.pc {
+                    background-image: url(../images/main-visual04.jpg);
+
+                }
+
+                &.item05 .content-bg.pc {
+                    background-image: url(../images/main-visual05.jpg);
+
+                }
+
+                &.item06 .content-bg.pc {
+                    background-image: url(../images/main-visual06.jpg);
+
+                }
+
+                &.item07 .content-bg.pc {
+                    background-image: url(../images/main-visual09.jpg);
+
+                }
+
+                &.item08 .content-bg.pc {
+                    background-image: url(../images/main-visual09.jpg);
+
+                }
+
+                .content-bg.mobile {
+                    display: none;
+                }
+
+                /* 모바일 이미지 */
+                &.item01 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m01.jpg);
+
+                }
+
+                &.item02 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m02.jpg);
+
+                }
+
+                &.item03 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m03.jpg);
+
+                }
+
+                &.item04 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m04.jpg);
+
+                }
+
+                &.item05 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m05.jpg);
+
+                }
+
+                &.item06 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m06.jpg);
+
+                }
+
+                &.item07 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m09.jpg);
+
+                }
+
+                &.item08 .content-bg.mobile {
+                    background-image: url(../images/main-visual-m07.jpg);
+                }
+
+                &:after {
+                    content: "";
+                    width: 336px;
+                    height: 70px;
+                    box-sizing: border-box;
+                    border-top: solid 3px #ffffff;
+                    border-bottom: solid 3px #ffffff;
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .swiper-slide-inner {
+                    width: 100%;
+                    height: 100%;
+
+                    .content-img {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        .content-bg {
+                            width: 100%;
+                            height: 100%;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center center;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+
+
+                        .swiper-slide-text {
+                            position: absolute;
+                            top: 80px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            text-align: center;
+                            color: white;
+                            font-size: 50px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .swiper-control {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn-controls {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .text-anim-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .text-nodes {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-left: 336px;
+        padding-top: 100px;
+        height: 100%;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .text-nodes-active {
+        opacity: 1;
+    }
+
+    .text-nodes h3 {
+        color: #fff;
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .text-nodes h2 {
+        color: #fff;
+        font-size: 80px;
+        font-weight: normal;
+    }
+
+    .text-link {
+        position: absolute;
+        bottom: 23%;
+        display: flex;
+        left: 336px;
+
+        .link-item {
+            display: flex;
+            gap: 60px;
+            pointer-events: auto;
+        }
+
+        a {
+            @include link-text-btn;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.visual-control {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 9;
+
+    .swiper-pagination {
+        position: static;
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+
+            &.swiper-pagination-bullet-active {
+                background: transparent;
+                border-color: $white-color;
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 16px;
+
+        li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: solid 2px transparent;
+            background-clip: padding-box;
+
+            &:first-of-type {
+                border-color: $white-color;
+                background: transparent;
+            }
+        }
+    }
+
+    .pause-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 26px;
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .bx-play {
+            display: none;
+        }
+
+        &.on {
+            .bx-pause {
+                display: none;
+            }
+
+            .bx-play {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@font-face{
+    font-family: 'genesis-head-light';
+    src: url('../fonts/GenesisSansHeadKRLight.eot');
+    src: url('../fonts/GenesisSansHeadKRLight.eot#iefix') format('embedeopentype'),
+        url('../fonts/GenesisSansHeadKRLight.woff') format('woff'),
+        url('../fonts/GenesisSansHeadKRLight.woff2') format('woff2');
+};
+
+@font-face{
+    font-family: 'genesis-head';
+    src: url('../fonts/GenesisSansHeadKRRegular.eot');
+    src: url('../fonts/GenesisSansHeadKRRegular.eot#iefix') format('embedeopentype'),
+        url('../fonts/GenesisSansHeadKRRegular.woff') format('woff'),
+        url('../fonts/GenesisSansHeadKRRegular.woff2') format('woff2');
+};
+
+@font-face{
+    font-family: 'genesis-text';
+    src: url('../fonts/GenesisSansTextKRRegular.eot');
+    src: url('../fonts/GenesisSansTextKRRegular.eot#iefix') format('embedeopentype'),
+        url('../fonts/GenesisSansTextKRRegular.woff') format('woff'),
+        url('../fonts/GenesisSansTextKRRegular.woff2') format('woff2');
+}
+
+
+body,html{
+    font-size: 16px;
+    font-family: $font-text;
+    line-height: 1; //단위가 생략되면 폰트사이즈의 비율로 계산됨
+    background: $bg-color;
+    letter-spacing: -0.5px;
+}

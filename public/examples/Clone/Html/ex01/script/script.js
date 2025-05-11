@@ -12,7 +12,7 @@ window.onload = () => {
     snsBtn();
     topBtn();
     footerNoticeSlide();
-    if(window.innerWidth <= 768){
+    if (window.innerWidth <= 768) {
         console.log(window.innerWidth)
         eventScroll();
     }
@@ -342,16 +342,16 @@ function sitemap() {
 function visualSlide() {
     let swiper;
     const pauseBtn = document.querySelector('.visual-control .pause-btn');
-    
+
     let isPlay = true;
 
     function initializeSwiper() {
         swiper = new Swiper(".visual-wrapper .swiper-container", {
             loop: true,
             speed: 1000,
-            autoplay : {
-                delay : 5000,
-                desableOnInteraction : true,  
+            autoplay: {
+                delay: 5000,
+                desableOnInteraction: true,
             },
             pagination: {
                 el: ".swiper-pagination",
@@ -374,9 +374,9 @@ function visualSlide() {
                     updateTextNodes(this);
                 }
             },
-            observer : true,
-            observerParents : true,
-            resizeObserver : true
+            observer: true,
+            observerParents: true,
+            resizeObserver: true
         });
     }
 
@@ -784,14 +784,14 @@ function eventScroll() {
     //영역의 크기보다 더 크게 해서 자연스럽게 넘기기 위함
     window.addEventListener('scroll', onScroll);
 
-    function removeEventScroll(){
-        window.removeEventListener('scroll',onScroll)
+    function removeEventScroll() {
+        window.removeEventListener('scroll', onScroll)
     }
-    return{removeEventScroll}
-    
+    return { removeEventScroll }
+
 
     function onScroll() {
-     
+
         const scrollTop = document.documentElement.scrollTop;
         textBox.style.height = `${wrapperHeight}px`;
         const scrollPercent = Math.max(0, Math.min(1, (scrollTop - wrapperTop + headerHeight) / textBox.offsetHeight))
@@ -802,12 +802,12 @@ function eventScroll() {
         if (scrollTop > wrapperTop - headerHeight && scrollTop < wrapperTop + wrapperHeight) {
             eventImg.style.position = 'fixed';
             eventInner.style.paddingTop = `${wrapperHeight * 0.9}px`;
-        } else if(scrollTop < wrapperTop || textBoxTop >= wrapperHeight){
+        } else if (scrollTop < wrapperTop || textBoxTop >= wrapperHeight) {
             eventImg.style.position = 'relative'
             eventInner.style.paddingTop = `0px`;
         }
 
-        if(translateYValue <= 0){
+        if (translateYValue <= 0) {
             eventImg.style.position = 'relative'
         }
     }
@@ -815,12 +815,12 @@ function eventScroll() {
 
 let eventScrollHandler;
 
-function resizeEvent(){
-    if(window.innerWidth <=768){
-        if(!eventScrollHandler){
+function resizeEvent() {
+    if (window.innerWidth <= 768) {
+        if (!eventScrollHandler) {
             eventScrollHandler = eventScroll()
-        }else{
-            if(eventScrollHandler){
+        } else {
+            if (eventScrollHandler) {
                 eventScrollHandler.removeEventScroll();
                 eventScrollHandler = null
             }

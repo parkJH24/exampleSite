@@ -1,0 +1,19 @@
+.container{
+  padding-top: 70px;
+}
+
+.inner {
+    width: auto;
+    height: 100%;
+    position: relative;
+    padding: 0 140px;
+    @media screen and (max-width: 1600px) {
+      padding: 0 100px;
+    }
+    @media screen and (max-width: 1360px) {
+      padding: 0 75px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 0 20px;
+    }
+  }

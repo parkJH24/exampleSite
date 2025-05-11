@@ -1,0 +1,305 @@
+@include laptop {
+    .logo {
+        margin-right: 50px;
+        width: 100px;
+    }
+
+    .visualContainer {
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide:after {
+                    width: 248px;
+                }
+
+            }
+
+            .text-nodes {
+                padding-left: 248px;
+                padding-top: 60px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                h2 {
+                    font-size: 60px;
+                }
+
+
+            }
+
+            .text-link {
+                left: 248px;
+            }
+
+            .visual-control {
+                gap: 20px;
+
+                .swiper-pagination {
+                    gap: 12px;
+
+                    .swiper-pagination-bullet {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    .modelContainer {
+        padding: 180px 0px 230px 150px;
+
+        .titleBox {
+            .title {
+                font-size: 36px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+        }
+
+        .category {
+            margin-bottom: 70px;
+        }
+    }
+
+}
+
+@include laptop02 {
+    .supportMenuWrapper {
+        >a {
+            .text {
+                display: none;
+            }
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .visualContainer {
+        height: auto;
+        padding-top: 57%;
+        min-height: 0px;
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide:after {
+                    width: 224px;
+                }
+            }
+
+            .text-nodes {
+                padding-left: 224px;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                h2 {
+                    font-size: 48px;
+                }
+
+            }
+
+            .text-link {
+                bottom: 16%;
+                left: 224px;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+
+            .visual-control {
+                bottom: 7%;
+            }
+
+        }
+
+    }
+
+    .modelContainer {
+        padding-top: 160px;
+
+        .titleBox {
+            .title {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+
+            .text {
+                font-size: 12px;
+            }
+        }
+
+        .category {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+@include tablet {
+    .hContainer {
+        height: 60px;
+    }
+
+    .logo {
+        width: 86px;
+    }
+
+    .gnbWrapper {
+        display: none;
+    }
+
+    .supportMenuWrapper {
+        gap: 0;
+
+        .supportLink,
+        .searchBtn {
+            display: none;
+        }
+    }
+
+    // visual
+    .visualContainer {
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide:after {
+                    display: none;
+                }
+
+            }
+
+            .text-nodes {
+                padding-left: 56px;
+                padding-top: 10px;
+            }
+
+            .text-link {
+                left: 56px;
+            }
+        }
+    }
+
+    //model
+    .modelContainer {
+        padding-left: 80px;
+    }
+}
+
+@include mobile {
+    .container {
+        padding-top: 60px;
+    }
+
+    .visualContainer {
+        height: calc(100vh - 60px);
+        padding-top: 0px;
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .swiper-slide-inner {
+                        .content-img {
+                            .content-bg {
+                                &.pc {
+                                    display: none;
+                                }
+
+                                &.mobile {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text-nodes {
+                padding-left: 20px;
+                padding-top: 40px;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                h2 {
+                    font-size: 42px;
+                }
+            }
+
+            .text-link {
+                bottom: 80px;
+                left: 20px;
+
+                .link-item {
+                    flex-direction: column;
+                    gap: 24px;
+
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .visual-control {
+                bottom: 20px;
+            }
+        }
+    }
+
+    //model
+    .modelContainer {
+        padding: 130px 0px;
+        .inner{
+            padding: 0;
+            .titleBox{
+                padding: 0px 30px;
+                .title{
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+                .text{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    //service
+    .serviceContainer{
+        padding: 0;
+        padding-bottom: 120px;
+        .inner{
+            padding: 0;
+            .serviceList{
+                flex-direction: column;
+                justify-content: start;
+                li{
+                    width: 100%;
+                    border-top: solid 1px $default-color;
+                    box-sizing: border-box;
+                    padding-left: 28px;
+                    a{
+                        justify-content: start;
+                        background-position: left center;
+                        background-size: 28px;
+                        padding: 46px;
+                        align-items: center;
+                        font-weight: normal;
+                    }
+                    &:first-of-type {
+                        border-top: none;
+                    }
+                }
+            }
+        }
+    }
+}

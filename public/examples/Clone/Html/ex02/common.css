@@ -20,12 +20,12 @@ body {
     position: relative;
     /* width: calc(44950px + 1000px); */
     top: 50%;
-    transform: translateY(-50%);
-    left: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .planet {
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     position: absolute;
     box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);
@@ -36,9 +36,11 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-.sun{
-    background: radial-gradient(circle,  rgb(255, 87, 87),rgb(255, 0, 0));
+
+.sun {
+    background: radial-gradient(circle, rgb(255, 87, 87), rgb(255, 0, 0));
 }
+
 /* ☿ 수성 */
 .mercury {
     width: 50px;
@@ -120,15 +122,18 @@ body {
     background: radial-gradient(circle, #4169e1, #00008b);
     box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.5);
 }
+
 .asteroid-belt {
     position: relative;
     top: 50%;
     height: 8px;
-    width: 5506px; /* 실제 거리 기반 */
+    width: 5506px;
+    /* 실제 거리 기반 */
     transform: translate(-50%, -50%);
     border-radius: 8px;
     pointer-events: none;
-  }
+}
+
 .asteroid-dot {
     width: 2px;
     height: 2px;
@@ -137,7 +142,7 @@ body {
     pointer-events: none;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
     position: absolute;
-  }
+}
 
 
 
@@ -188,16 +193,17 @@ body {
     white-space: nowrap;
     pointer-events: none;
 }
-.planet-core{
+
+.planet-core {
     border-radius: 50%;
     transition: 500ms;
 }
 
-#tooltip{
-    position:absolute;
+#tooltip {
+    position: absolute;
 }
 
-.planet-nav{
+.planet-nav {
     position: fixed;
     top: 50px;
     left: 50%;
@@ -209,43 +215,49 @@ body {
     display: flex;
     gap: 8px;
 }
-.planet-nav button{
+
+.planet-nav button {
     background: transparent;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     font-size: 24px;
     cursor: pointer;
-    transition : 500ms
-}
-.planet-nav button:hover{
-    color: rgba(255,255,255,1);
-}
-.planet-nav button.on{
-    color: rgba(255,255,255,1);
+    transition: 500ms
 }
 
-.autoBtnWrapper{
+.planet-nav button:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.planet-nav button.on {
+    color: rgba(255, 255, 255, 1);
+}
+
+.autoBtnWrapper {
     position: absolute;
     top: 50px;
     left: 100px;
     z-index: 99;
 }
-.autoBtnWrapper button{
+
+.autoBtnWrapper button {
     color: #fff;
 }
 
 .spaceShip {
     position: fixed;
-    bottom: 100px; /* 원하는 위치로 조정 */
+    bottom: 100px;
+    /* 원하는 위치로 조정 */
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
     z-index: 1000;
     pointer-events: none;
     transition: transform 0.3s ease;
-  }
-  .spaceShip.active {
+}
+
+.spaceShip.active {
     filter: drop-shadow(0 0 10px yellow);
     transform: translateX(-50%) scale(1.3);
     transition: all 0.3s ease;
-  }
+}

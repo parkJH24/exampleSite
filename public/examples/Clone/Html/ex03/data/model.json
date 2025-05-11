@@ -1,0 +1,175 @@
+[
+    {
+        "title" : "G90 LONG WHEEL BASE BLACK",
+        "description" :"",
+        "image" : "./images/model/g90-black-long.png",
+        "alt" : "G90 LONG WHEEL BASE BLACK",
+        "categories" :["all","black","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G90 BLACK",
+        "description" :"",
+        "image" : "./images/model/g90-black.png",
+        "alt" : "G90 BLACK",
+        "categories" :["all","black","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G80 BLACK",
+        "description" :"",
+        "image" : "./images/model/g80-black.png",
+        "alt" : "G80 BLACK",
+        "categories" :["all","black","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV80 COUPE BLACK",
+        "description" :"",
+        "image" : "./images/model/gv80-coupe-black.png",
+        "alt" : "GV80 COUPE BLACK",
+        "categories" :["all","black","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV80 BLACK",
+        "description" :"",
+        "image" : "./images/model/gv80-black.png",
+        "alt" : "GV80 BLACK",
+        "categories" :["all","black","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G90 LONG WHEEL BASE",
+        "description" :"",
+        "image" : "./images/model/g90-long.png",
+        "alt" : "G90 LONG WHEEL BASE",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G90",
+        "description" :"",
+        "image" : "./images/model/g90.png",
+        "alt" : "G90",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+
+    },
+    {
+        "title" : "G80",
+        "description" :"",
+        "image" : "./images/model/g80.png",
+        "alt" : "G80",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "ELECTRIFIED G80",
+        "description" :"",
+        "image" : "./images/model/Electrified-g80 .png",
+        "alt" : "ELECTRIFIED G80",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G70",
+        "description" :"",
+        "image" : "./images/model/g70.png",
+        "alt" : "G70",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "G70 SHOOTING BRAKE",
+        "description" :"",
+        "image" : "./images/model/G70-SHOOTING-BRAKE.png",
+        "alt" : "G70 SHOOTING BRAKE",
+        "categories" :["all","sedan"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV80 COUPE",
+        "description" :"",
+        "image" : "./images/model/gv80-coupe.png",
+        "alt" : "GV80 COUPE",
+        "categories" :["all","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV80",
+        "description" :"",
+        "image" : "./images/model/gv80.png",
+        "alt" : "GV80",
+        "categories" :["all","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV70",
+        "description" :"",
+        "image" : "./images/model/gv70.png",
+        "alt" : "GV70",
+        "categories" :["all","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "ELECTRIFIED GV70",
+        "description" :"",
+        "image" : "./images/model/Electrified-gv70.png",
+        "alt" : "ELECTRIFIED GV70",
+        "categories" :["all","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    },
+    {
+        "title" : "GV60",
+        "description" :"",
+        "image" : "./images/model/gv60.png",
+        "alt" : "GV60",
+        "categories" :["all","suv"],
+        "links" :[
+            {"label" :"견적내기","href" : "#", "icon" : true},
+            {"label" :"시승 신청","href" : "#", "icon" : true}
+        ]
+    }
+    
+    
+    
+]

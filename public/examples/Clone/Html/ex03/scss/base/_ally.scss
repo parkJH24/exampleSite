@@ -1,0 +1,37 @@
+.skipMenu li a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    color: $white-color;
+    text-align: center;
+    background: $bg-color;
+    &:focus{
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;
+    }
+}
+
+.blind{
+    /*
+    대체 텍스트 기법
+    display : none = 화면에서 사라지지만 리더기에서도 읽히지 않는다.
+    position : absolute; left : -9999px// 과부화를 줄 수 있다.
+    text-indent : -9999px  과부하를 줄 수 있다.
+    */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /*영역에 1px씩 주는 이유는 컨텐츠를 인식할 수 있게 최소한의 크기*/
+    overflow: hidden;//넘치는 영역에서 보이지 않게 함
+    visibility: hidden; //해당 영역을 보이지 않게 하지만 공간은 존재
+    margin: -1px;
+    clip-path: inset(-50%);
+    //clip-path : 포토샵의 마스크와 같은 기능
+    //clip은 더 이상 사용하지 않는 css이며 clip-path로 대체되었다.
+}
