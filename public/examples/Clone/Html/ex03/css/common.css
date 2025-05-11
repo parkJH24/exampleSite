@@ -184,7 +184,7 @@ body, html {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(../../images/logo.png) no-repeat center center/100%;
+  background: url(./images/logo.png) no-repeat center center/100%;
 }
 .hContainer .inner .gnbWrapper {
   height: 100%;
@@ -1281,18 +1281,18 @@ body, html {
   display: flex;
   color: #ffffff;
   padding-top: 80px;
-  background: url(../../images/quitation.gif) no-repeat center top;
+  background: url(../images/quitation.gif) no-repeat center top;
   justify-content: center;
   font-size: 16px;
 }
 .serviceContainer .serviceList li a.icon-sales {
-  background-image: url(../../images/sales.gif);
+  background-image: url(../images/sales.gif);
 }
 .serviceContainer .serviceList li a.icon-drive {
-  background-image: url(../../images/drive.gif);
+  background-image: url(../images/drive.gif);
 }
 .serviceContainer .serviceList li a.icon-catalog {
-  background-image: url(../../images/catalog.gif);
+  background-image: url(../images/catalog.gif);
 }
 
 .sitemapWrapperPc {
