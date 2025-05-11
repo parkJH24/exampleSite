@@ -67,7 +67,7 @@ function awardSlide() {
         },
     });
 
-    const pauseBtn = document.querySelector(".award-wrapper .pause-btn");
+    const pauseBtn = document.querySelector(".awardListWrapper .pause-btn");
     let isPlay = true;
 
     if (pauseBtn) {
